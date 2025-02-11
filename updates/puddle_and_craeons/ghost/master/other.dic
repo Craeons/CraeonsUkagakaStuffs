@@ -108,7 +108,7 @@ recommendsites_kero : array
 OnTalkTest
 {
 	//raise me with \![raise,OnTalkTest,test]
-	"%(craethink)You think we should just\w2.\w2.\w2.\w8 leave?\w4%(pudthink)\w8Sure,\w4 what's stopping us?\w8%(pud) But,\w4 do we want to leave?\w8%(crae)\w4\n\n.\w2.\w2.\w8\n.\w2.\w2.\w8Nah,\w4 I'm too comfy here.\w8%(pudhapi)\w8\n\nIf you say so."
+	"%(pud)The network update worked!\w8%(pudhapi) Yipee!"
 }
 
 //CHANGE STATUS
