@@ -1,0 +1,325 @@
+//Some quick notes:
+//1: surfaces.txt does NOT support same line comments. If you want to write a comment, ALWAYS PUT IT ON ITS OWN LINE. If you put comments after other bits of code in the same line, it may seem to work at first, but it can cause cryptic errors down the line. Save yourself the trouble. Always put comments on their own lines in here. Additionally, it doesn't do block comments with /* and */
+//2: The example blink code is set up with the new definition, which I recommend you use. Here is my guide to what that means: https://ukagaka.zichqec.com/guide/old_definition_vs_new_definition
+//If you want to use old definition, make sure to erase that 'version,1' bit.
+//4: Also consider taking a look at Ukadoc's list of recommended surfaces! https://ukagakadreamteam.github.io/ukadoc/manual/descript_shell_surfaces.html#caption_standarddef This can give you an idea of how to start, but also, some external SHIORI events use these surfaces by default! If your ghost has them, it will react as intended! It's not required, but it's something you can consider.
+//5: If you'd like a bit more structure to start with, I have a shell template you can use! https://ukagaka.zichqec.com/template/simplicity_shell
+
+
+descript
+{
+	version,1
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+surface0
+{
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
+	//horns collision
+	//left
+	collisionex1,horn,rect,111,80,146,140
+	//right
+	collisionex2,horn,rect,184,80,212,140
+	//tail collision
+	collisionex3,tail,polygon,260,303,208,85,350,85,350,334,234,330
+	//nose collision
+	collisionex4,nose,rect,147,170,161,182
+	
+	
+	//Example code for blink animation - uncomment if you want it
+	animation0.interval,random,5
+	animation0.pattern0,overlay,1004,0,0,0
+	animation0.pattern1,overlay,1005,40,0,0
+	animation0.pattern2,overlay,1006,20,0,0
+	animation0.pattern3,overlay,1005,70,0,0
+	animation0.pattern4,overlay,1004,20,0,0
+	animation0.pattern5,overlay,-1,40,0,0
+	//upper eyes blinking animation
+	animation1.interval,random,6
+	animation1.pattern0,overlay,1007,0,0,0
+	animation1.pattern1,overlay,1008,40,0,0
+	animation1.pattern2,overlay,1009,20,0,0
+	animation1.pattern3,overlay,1008,70,0,0
+	animation1.pattern4,overlay,1007,20,0,0
+	animation1.pattern5,overlay,-1,40,0,0
+	
+	
+	//Example code for a talk animation - uncomment if you want it
+	animation2.interval,talk,5
+	animation2.pattern0,alternativestart,(3.4.5)
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1002,0,0,0
+	animation3.pattern1,overlay,1003,150,0,0
+	animation3.pattern2,overlay,1002,200,0,0
+	animation3.pattern3,overlay,-1,150,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1002,0,0,0
+	animation4.pattern1,overlay,1003,150,0,0
+	animation4.pattern2,overlay,-1,150,0,0
+	
+	animation5.interval,never
+	animation5.pattern0,overlay,1001,0,0,0
+	animation5.pattern1,overlay,1002,150,0,0
+	animation5.pattern2,overlay,-1,150,0,0
+	
+	//left horn flick
+	animation6.interval,never
+	animation6.pattern0,replace,1010,0,83,90
+	animation6.pattern1,replace,1011,70,83,90
+	animation6.pattern2,replace,1012,50,83,90
+	animation6.pattern3,replace,1013,40,83,90
+	animation6.pattern4,replace,1014,60,83,90
+	animation6.pattern5,replace,1013,270,83,90
+	animation6.pattern6,replace,1012,120,83,90
+	animation6.pattern7,replace,1011,50,83,90
+	animation6.pattern8,replace,-1,90,83,90
+	
+	//right horn flick
+	animation7.interval,never
+	animation7.pattern0,replace,1015,0,187,87
+	animation7.pattern1,replace,1016,70,187,87
+	animation7.pattern2,replace,1017,50,187,87
+	animation7.pattern3,replace,1018,40,187,87
+	animation7.pattern4,replace,1019,60,187,87
+	animation7.pattern5,replace,1018,270,187,87
+	animation7.pattern6,replace,1017,120,187,87
+	animation7.pattern7,replace,1016,50,187,87
+	animation7.pattern8,replace,-1,90,187,87
+	
+	//right horn flicky flick
+	animation8.interval,never
+	animation8.pattern0,replace,1016,10,187,87
+	animation8.pattern0,replace,1017,200,187,87
+	animation8.pattern0,replace,1016,120,187,87
+	animation8.pattern0,replace,1017,90,187,87
+	animation8.pattern0,replace,1018,100,187,87
+	animation8.pattern0,replace,1017,270,187,87
+	animation8.pattern0,replace,1016,90,187,87
+	animation8.pattern0,replace,-1,40,187,87
+}
+surface1
+{
+	/// --- EMBARASSED ---
+	element0,overlay,surface1.png,0,0
+}
+surface2
+{
+	/// --- SURPRISED ---
+	element0,overlay,surface2.png,0,0
+}
+surface3
+{
+	/// --- WORRIED ---
+	element0,overlay,surface3.png,0,0
+}
+surface4
+{
+	/// --- SAD ---
+	element0,overlay,surface4.png,0,0
+}
+surface5
+{
+	/// --- HAPPY ---
+	element0,overlay,surface5.png,0,0
+}
+surface6
+{
+	/// --- CONTENT ---
+	element0,overlay,surface6.png,0,0
+}
+surface7
+{
+	/// --- ANGRY ---
+	element0,overlay,surface7.png,0,0
+}
+surface8
+{
+	/// --- THOUGHTFUL ---
+	element0,overlay,surface8.png,0,0
+}
+surface9
+{
+	/// --- BORED ---
+	element0,overlay,surface9.png,0,0
+}
+surface1101
+{
+	/// --- BLEP ---
+	element0,overlay,surface1101.png,0,0
+}
+surface1102
+{
+	/// --- SMIRK ---
+	element0,overlay,surface1102.png,0,0
+}
+surface1103
+{
+	/// --- GAMING ---
+	element0,overlay,surface1103.png,0,0
+	
+	//Example code for blink animation - uncomment if you want it
+	animation0.interval,random,5
+	animation0.pattern0,overlay,1004,0,0,0
+	animation0.pattern1,overlay,1005,40,0,0
+	animation0.pattern2,overlay,1006,20,0,0
+	animation0.pattern3,overlay,1005,70,0,0
+	animation0.pattern4,overlay,1004,20,0,0
+	animation0.pattern5,overlay,-1,40,0,0
+	//upper eyes blinking animation
+	animation1.interval,random,6
+	animation1.pattern0,overlay,1007,0,0,0
+	animation1.pattern1,overlay,1008,40,0,0
+	animation1.pattern2,overlay,1009,20,0,0
+	animation1.pattern3,overlay,1008,70,0,0
+	animation1.pattern4,overlay,1007,20,0,0
+	animation1.pattern5,overlay,-1,40,0,0
+	
+	//Example code for a talk animation - uncomment if you want it
+	animation2.interval,talk,4
+	animation2.pattern0,alternativestart,(3.4)
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,1003,0,0,0
+	animation3.pattern1,overlay,1002,200,0,0
+	animation3.pattern2,overlay,1001,200,0,0
+	animation3.pattern3,overlay,-1,200,0,0
+	
+	animation4.interval,never
+	animation4.pattern0,overlay,1002,0,0,0
+	animation4.pattern1,overlay,-1,200,0,0
+}
+
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+
+surface10
+{
+	// --- DEFAULT POSE ---
+	//top of head collision
+	collisionex0,head,polygon,160,120,250,120,260,160,160,160
+	//wingy collision
+	collisionex1,wing,polygon,126,132,168,151,175,218,135,184
+	//tail collision
+	collisionex2,tail,polygon,99,122,129,180,95,216,58,154
+	//nose collision
+	collisionex3,nose,rect,203,161,224,180
+	
+	//Example code for blink animation - uncomment if you want it
+	animation0.interval,random,7
+	animation0.pattern0,overlay,2003,0,0,0
+	animation0.pattern1,overlay,2004,50,0,0
+	animation0.pattern2,overlay,2003,50,0,0
+	animation0.pattern3,overlay,-1,100,0,0
+	
+	//Example code for a talk animation - uncomment if you want it
+	animation1.interval,talk,4
+	animation1.pattern0,alternativestart,(2.3)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,2002,0,0,0
+	animation2.pattern1,overlay,2001,50,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,2002,0,0,0
+	animation3.pattern1,overlay,-1,50,0,0
+	
+	//wing flap animation
+	animation6.interval,never
+	animation6.pattern0,replace,2010,0,91,133
+	animation6.pattern1,replace,2011,70,91,133
+	animation6.pattern2,replace,2010,130,91,133
+	animation6.pattern3,replace,2011,100,91,133
+	animation6.pattern4,replace,2012,90,91,133
+	animation6.pattern5,replace,2013,50,91,133
+	animation6.pattern6,replace,2014,50,91,133
+	animation6.pattern7,replace,2015,100,91,133
+	animation6.pattern8,replace,2014,270,91,133
+	animation6.pattern9,replace,2013,140,91,133
+	animation6.pattern10,replace,2012,60,91,133
+	animation6.pattern11,replace,2011,50,91,133
+	animation6.pattern12,replace,-1,90,91,133
+}
+surface11
+{
+	// --- EMBARASSED ---
+	element0,overlay,surface11.png,0,0
+}
+surface12
+{
+	// --- SURPRISED ---
+	element0,overlay,surface12.png,0,0
+}
+surface13
+{
+	// --- WORRIED ---
+	element0,overlay,surface13.png,0,0
+}
+surface14
+{
+	// --- SAD ---
+	element0,overlay,surface14.png,0,10
+}
+surface15
+{
+	// --- HAPPY ---
+	element0,overlay,surface15.png,0,0
+}
+surface16
+{
+	// --- SMILING ---
+	element0,overlay,surface16.png,0,0
+}
+surface17
+{
+	// --- ANGRY ---
+	element0,overlay,surface17.png,0,0
+}
+surface18
+{
+	// --- THOUGHTFUL ---
+	element0,overlay,surface18.png,0,0
+}
+surface19
+{
+	// --- BORED ---
+	element0,overlay,surface19.png,0,0
+}
+surface2101
+{
+	/// --- BLEP ---
+	element0,overlay,surface2101.png,0,0
+}
+surface2102
+{
+	/// --- SMIRK ---
+	element0,overlay,surface2102.png,0,0
+}
+surface2103
+{
+	/// --- GAMING ---
+	element0,overlay,surface2103.png,0,0
+	
+	//blink
+	animation0.interval,random,7
+	animation0.pattern0,overlay,2003,0,0,0
+	animation0.pattern1,overlay,2004,50,0,0
+	animation0.pattern2,overlay,2003,50,0,0
+	animation0.pattern3,overlay,-1,100,0,0
+	
+	//Example code for a talk animation - uncomment if you want it
+	animation1.interval,talk,4
+	animation1.pattern0,alternativestart,(2.3)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,2002,0,0,0
+	animation2.pattern1,overlay,2001,50,0,0
+	animation2.pattern2,overlay,-1,200,0,0
+	
+	animation3.interval,never
+	animation3.pattern0,overlay,2002,0,0,0
+	animation3.pattern1,overlay,-1,50,0,0
+}

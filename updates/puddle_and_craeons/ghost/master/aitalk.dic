@@ -1,0 +1,75 @@
+OnAiTalk
+{
+	if CHAIN.IDName == ""
+	{
+		LastTalk = RandomTalk
+	}
+	else
+	{
+		LastTalk = ChainTalk
+	}
+	LastTalk
+}
+
+RandomTalk : nonoverlap_pool
+{
+	{
+		"%(pudthink)I don't really get this whole\w4 'living in the pc'\w4 thing.\w8\w4 Like, are we a program now?\w8 An AI?\w8 A Game?\w8%(puduhh) Or more like a virus?\w8\w4%(crae)Computer aids.\e"
+	}
+	{
+		"%(crae)Hey Puddle,\w2 hey Puddle,\w2 hey Puddle,\w2 hey Puddle,\w2 hey Puddle,%(pudhuh)\w2What?%(craehapi)\n\n\w8\w4"
+		--
+		"I love youuu~ ♥"
+		"Hiiiii~ ♥"
+		"Gay."
+		--
+		"\w8\w4%(pudhapi)\n\nSilly\w2.\w2.\w2.\e"
+	}
+	{
+		"%(pudhapi)Hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w2 hey,\w4"
+		--
+		"\w8%(craehapi)Heya!"
+		"\w8%(craethink)Hmm?"
+		"\w8%(craehapi)Hiii Puddle~"
+		--
+		"\w4\w8%(pud)\n\nHey, guess what?\w4\w8%(crae)\n\nWhat?\w4%(pudhapi)\w8\n\nI love you~\w4%(craehapi)\w8\n\nAww..."
+	}
+	{
+		"%(crae)So,\w4 what do you feel about this being on %(user)'s computer so far?\w8%(pud)It's pretty warm and comfy here,\w4 y'know.\w8 But,\w4 like.%(pudthink)\w8 Sometimes I feel itchy for no reason.\w4%(craehuh)\n\n\w4It sounds like you have bugs\w2.\w2.\w2.\e"
+	}
+	{
+		"%(pudthink)I really wanna eat some %(tastyfood) right now\w2.\w2.\w2.\w8\w4%(craecri)Can \w8\w4I\w8\w4 have some\w2.\w2.\w2.\e"
+	}
+	{
+		"%(pudsnooze)"
+		"%(craesnooze)"
+		"%(pudsnooze)\w8\w8\w8%(craesnooze)"
+	}
+	{
+		"%(craethink)Where did your halo go,\w4 anyways?\w8 I liked it,\w4 it's like we had matching clothes\w2.\w2.\w2.\w8\w4%(pud)'Twas kinda a pain in the ass to keep it on my head all the time,\w4 too much lights and blinking.\w8\w4%(craecri)\n\nLooked pretty, though\w2.\w2.\w2.%(pudhapi)\n\nTrue.\w8\w4 Maybe I could turn it back on for you sometime,\w4 hehe.\w8\w4%(craehapi)\n\nWould you?\w8 Yaaaay~\w4%(pud)\w8\n\nAlthough\w2.\w2.\w2.%(puduhh)\w8 your clothes allegory made me realize that I'm all naked right now\w2.\w2.\w2.\w8\w4%(crae)\n\nNo worries,\w4 I'm enjoying the view~\w8\w4 Heehee\w2.\w2.\w2.\e"
+	}
+	{
+		"%(pud)What do you think our originals are doing right now?%(crae)Hmm, I can look over there if you want...\w4%(craethink)\w8\w8\w8\n"
+		--
+		"%(craehuh)Oh,\w4 my."
+		"%(craehapi)Aww..."
+		"%(craeshy)"
+		"Huh,\w4 interesting..."
+		--
+		"\w4\w8%(pudhuh)\n\nWhat? What is it?\w4\w8%(crae)\n\nNah,\w4 I'll tell you later.\w8 Not in front of %(username).\e"
+	}
+	{
+		"%(craethink)How do you always manage to do so much,\w4 but get nothing at all done at the same time?\w8%(pudsmile)\w4The power of\w4 A\w2D\w2H\w2D.\e"
+	}
+	{
+		"%(pud)I wonder how we ended up here\w2.\w2.\w2.\w8 %(pudthink)I mean,\w4 exactly right here.\w8\w4%(crae)It's not like we can't leave whenever we wanna.\w8%(pudthink)\w4\n\nDo you want to?\w8%(crae)\w4\n\nMeh,\w4 that sounds like work.\e"
+	}
+	{
+		"%(pud)Sometimes I really wish to tuck my face in your feathers,\w4 they look so fluffy and comfy\w2.\w2.\w2.\w4%(craesmile)\w8Maybe when we get more sprites~ ♥"
+	}
+	{
+		"%(craethink)You think we should just\w2.\w2.\w2.\w8 leave?\w4%(pudthink)\w8Sure,\w4 what's stopping us?\w8%(pud) But,\w4 do we want to leave?\w8%(crae)\w4\n\n.\w2.\w2.\w8\n.\w2.\w2.\w8Nah,\w4 %(craesnooze)I'm too comfy here.\w8%(pudsmile)\w8\n\nIf you say so."
+	}
+	
+	// "\0\s[0]A quick overview of the built in ways to address the user in this template, which are all decided through the SSP preferences:\w8\n%(username) %(they) %(them) %(their) %(theirs) %(themself)\w8\nAnd an example of the " + '%(p)' + " function: %(they) %(p('are','is')) working on a ghost"
+}

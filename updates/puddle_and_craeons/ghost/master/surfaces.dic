@@ -1,0 +1,83 @@
+// .dic file for calling expressions
+
+// Puddle's expressions
+pud {
+	"\0\s[0]"
+}
+pudshy {
+	"\0\s[1]"
+}
+pudhuh {
+	"\0\s[2]"
+}
+puduhh {
+	"\0\s[3]"
+}
+pudcri {
+	"\0\s[4]"
+}
+pudhapi {
+	"\0\s[5]"
+}
+pudsmile {
+	"\0\s[6]"
+}
+pudangy {
+	"\0\s[7]"
+}
+pudthink {
+	"\0\s[8]"
+}
+pudsnooze {
+	"\0\s[9]"
+}
+pudblep {
+	"\0\s[1101]"
+}
+pudsmirk {
+	"\0\s[1102]"
+}
+pudgaming {
+	"\0\s[1103]"
+}
+
+// Craeons' expressions
+crae {
+	"\1\s[10]"
+}
+craeshy {
+	"\1\s[11]"
+}
+craehuh {
+	"\1\s[12]"
+}
+craeuhh {
+	"\1\s[13]"
+}
+craecri {
+	"\1\s[14]"
+}
+craehapi {
+	"\1\s[15]"
+}
+craesmile {
+	"\1\s[16]"
+}
+craeangy {
+	"\1\s[17]"
+}
+craethink {
+	"\1\s[18]"
+}
+craesnooze {
+	"\1\s[19]"
+}
+craeblep {
+	"\1\s[2101]"
+}
+craesmirk {
+	"\1\s[2102]"
+}
+craegaming {
+	"\1\s[2103]"
+}

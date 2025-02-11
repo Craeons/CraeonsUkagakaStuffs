@@ -1,0 +1,16 @@
+charset,UTF-8
+
+name,Puddle and Craeons
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Craeons & deadstoats
+craftmanurl,https://craeons.tumblr.com/
+
+sakura.name,Puddle
+kero.name,Craeons
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0
