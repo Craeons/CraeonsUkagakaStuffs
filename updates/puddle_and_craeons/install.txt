@@ -3,3 +3,5 @@ type,ghost
 
 name,Puddle and Craeons
 directory,puddle_and_craeons
+
+balloon.directory,earlybirb_starrynightcat

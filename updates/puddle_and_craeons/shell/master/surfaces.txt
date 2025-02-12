@@ -93,13 +93,13 @@ surface0
 	//right horn flicky flick
 	animation8.interval,never
 	animation8.pattern0,replace,1016,10,187,87
-	animation8.pattern0,replace,1017,200,187,87
-	animation8.pattern0,replace,1016,120,187,87
-	animation8.pattern0,replace,1017,90,187,87
-	animation8.pattern0,replace,1018,100,187,87
-	animation8.pattern0,replace,1017,270,187,87
-	animation8.pattern0,replace,1016,90,187,87
-	animation8.pattern0,replace,-1,40,187,87
+	animation8.pattern1,replace,1017,200,187,87
+	animation8.pattern2,replace,1016,120,187,87
+	animation8.pattern3,replace,1017,90,187,87
+	animation8.pattern4,replace,1018,100,187,87
+	animation8.pattern5,replace,1017,270,187,87
+	animation8.pattern6,replace,1016,90,187,87
+	animation8.pattern7,replace,-1,40,187,87
 }
 surface1
 {

@@ -105,17 +105,63 @@ recommendsites_kero : array
 }
 
 // SCRIPT TEST
-OnTalkTest
-{
+OnTalkTest {
 	//raise me with \![raise,OnTalkTest,test]
 	"%(pud)The network update worked!\w8%(pudhapi) Yipee!"
 }
 
 //CHANGE STATUS
-OnCurrentStateChange
-{
+OnCurrentStateChange {
 	//raise me with \![raise,OnCurrentStateChange,gaming]
 	currentstate = reference0
+}
+
+OnPronounsChange {
+	// reference0 = pronoun
+	// reference1 = whether this is from first install or not
+	case reference0 {
+		when "he"; pronouns = "he"
+		when "she"; pronouns = "she"
+		when "it"; pronouns = "it"
+		others; pronouns = "they"
+	}
+	
+	if reference1 {
+		"%(craethink)I see... %(they)/%(them)/%(theirs), its it?%(crae) How about a name?\![open,inputbox,OnNameTeach,-1]"
+	}
+}
+
+OnNameTeach {
+	if reference0 == ""; username = "anonymous"
+	else; username = reference0
+	
+	case frenuser {
+		when "craeons" {
+			"%(pudhapi)Look, Crae, look! It's the big you! Did they come here to pick us...%(pudthink) Wait, they don't quite look like you. Maybe a bit sexier, even.%(craeangy)\f[height,-3](Don't flirt with my sexy alternate self while I'm right here...)%(pudhapi)\n\nShould I flirt with you in front of them instead, then?\e"
+		}
+		when "puddle" {
+			"%(pudhapi)Oh hey, it's the big me! Or...%(pudhuh) Someone who looks very like me. %(pudthink)Or... Not really. Hmm...\n%(pudsmile)Let's rummage through their files to know for sure~%(craesmirk)Is everyone going by %(username) so attractive, or is it just you guys? Heehee.%(pud)\n\nNah, sorry, it's just the one and only us~\e"
+		}
+		when "rain" {
+			"%(craehapi)Look, Puddle, it's Rainy~! Hiiii Rainy hiiiii~%(pudhapi)Rain hiiii hiiii look Rain look we're in da 'puter!!!!!\e"
+		}
+		when "sebi" {
+			"%(crae)Hey there, Ketchup Twink.%(craesmirk) Yeah, that's right. I know what you are.%(pudhapi)Hiiiiiiiiiii Mr. Charmer~\e"
+		}
+		when "harune" {
+			"%(crae)OMG, it's harune!%(craehapi) Hiiiii harune, hope your day was good~%(pudhapi)Hey hey hey hello haruney want me %(pudsmirk)to google some wolfguys for you...%(pudhapi) (giggling)\e"
+		}
+		when "pixel" {
+			"%(pudhapi)Heya there puppyboy, looking handsome today~ Mwa~"
+			"%(pudhapi)Hiiii there princess~ %(pudsmirk)Hehe, welcoming me onto your personal computer, are you?"
+			--
+			"%(craeblep)Get a room... %(craesmirk)oh, wait, I guess this kinda is one.\e"
+		}
+		when "cel" {
+			"No way, it's our smartguy cel! Hello, cel, look, I'm da code now! Are you proud of me?%(craeangy)\f[height,-3](I'm the one who did the code, be prouder of me instead...)%(pudhapi)\n\n\f[height,-3](Don't worry, I'm soooo proud of you too~)\e"
+		}
+	}
+	"%(pudhapi)Neat! Okay, we'll be calling you %(username) from now on.%(crae)Nice to meetcha, %(username)~"
 }
 
 //—————————————————————————————— User pronoun related ——————————————————————————————

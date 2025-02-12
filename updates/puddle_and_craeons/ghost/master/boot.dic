@@ -10,10 +10,13 @@ OnFirstBoot : all
 	pronouns = "they"
 	currentstate = "default"
 	
-	"Opening Dialogue"
+	"%(pudhuh)Huh- wha- how did we end up here?%(craeblep)Dunno, you tell me...%(puduhh)\n\nI just followed you around?%(craeuhh)\n\nI thought it was me following you around?%(pudthink)\n\nIf we both followed each other, how did we-%(crae)\n\nHey, hey, look, there's someone watching over there.%(pudhuh)\n\nOh? %(pud)Ooooh, really. %(pudhapi)\nHi there! %(pud)Don't mind us, we just got a bit lost here... \x%(pudthink)Who are you, actually?"
 	
 	// Pronouns
-	""
+	"\n\n\_q\![*]\q[he/him,OnPronounsChange,he,1]"
+	"\n\![*]\q[she/her,OnPronounsChange,she,1]"
+	"\n\![*]\q[it/its,OnPronounsChange,it,1]"
+	"\n\![*]\q[they/them,OnPronounsChange,they,1]\e"
 }
 
 OnInitialize
