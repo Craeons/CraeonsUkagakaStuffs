@@ -1,12 +1,12 @@
 ghost/master/aitalk.dicef03172ec8e7c8442b30e9e33195890asize=3578date=2025-02-11T11:44:10charset=OSNative
-ghost/master/boot.dic37851820cad03a75a13b290496c45fc2size=2912date=2025-02-12T06:21:29
+ghost/master/boot.dic416c4ae215abd5615084725018821f60size=3026date=2025-02-12T22:33:26
 ghost/master/descript.txt5103ea58f1976ef680657a17872816c7size=234date=2025-02-08T21:17:58
 ghost/master/emerg.dicc7cb6eacd3262003fef909c382a6fefesize=351date=2023-04-14T14:45:50
 ghost/master/icon.ico9c41d7163faa06827774a4a8a279173esize=99797date=2023-02-02T02:36:51
 ghost/master/kero_menu.dic8ed124c0eb6bfb7cb570eb4bf9f99314size=1089date=2023-05-06T15:47:14
 ghost/master/meta.dic969657a3596e503fdea40f9716081169size=5500date=2025-02-10T08:47:17
 ghost/master/mouse.dic1d87248b75f003377d1a8bfa58b55248size=1030date=2025-02-06T14:52:02
-ghost/master/other.dic50850b69eb4f781a170cb8ebb9371594size=9528date=2025-02-12T06:17:04
+ghost/master/other.dic3302b586dbca2605066835b92e5ad106size=9896date=2025-02-12T22:40:18
 ghost/master/sakura_menu.dica36a04b7ec719f307e2165090ac6e2a4size=1552date=2023-05-06T15:47:21
 ghost/master/surfaces.dic9c260da78ecb777ad04c9ff6d0c395bbsize=805date=2025-02-10T08:30:39
 ghost/master/word.dicfaf54aba2446bdeea31043a729d62f41size=335date=2025-02-10T21:04:45
@@ -21,7 +21,7 @@ ghost/master/yaya_emerg.txt9e43b4696366a536ecc69e45d80e392csize=607date=2023-
 install.txt63bcec5bd1f443636b438dd9f933c202size=128date=2025-02-12T06:22:42
 readme.txt4b53e10ae11e4021f7a25eb6b581cc1bsize=4545date=2024-03-05T21:38:23
 shell/master/descript.txta399bb741df408b2cbcce58ab6bcf403size=151date=2025-02-08T22:13:21
-shell/master/surface0.png9cfdc0367c888a92885b741948829628size=70341date=2025-02-06T12:27:46
+shell/master/surface0.png9e1842e118ff28892a4a054413df2671size=71649date=2025-02-12T22:30:11
 shell/master/surface1.png9ec41b345311ca4d097b22a92c64e973size=68969date=2025-02-08T20:43:14
 shell/master/surface10.png55ff6ded16108c605f38462322eda2eesize=47245date=2025-02-06T12:33:34
 shell/master/surface1001.pngc97fef5f6d8342523b5780f4e11d30b3size=1708date=2025-02-08T20:54:32

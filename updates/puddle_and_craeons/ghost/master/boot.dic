@@ -10,7 +10,7 @@ OnFirstBoot : all
 	pronouns = "they"
 	currentstate = "default"
 	
-	"%(pudhuh)Huh- wha- how did we end up here?%(craeblep)Dunno, you tell me...%(puduhh)\n\nI just followed you around?%(craeuhh)\n\nI thought it was me following you around?%(pudthink)\n\nIf we both followed each other, how did we-%(crae)\n\nHey, hey, look, there's someone watching over there.%(pudhuh)\n\nOh? %(pud)Ooooh, really. %(pudhapi)\nHi there! %(pud)Don't mind us, we just got a bit lost here... \x%(pudthink)Who are you, actually?"
+	"%(pudhuh)Huh-\w4 wha-\w4 how did we end up here?\w4%(craeblep)\w8Dunno,\w4 you tell me\w2.\w2.\w2.\w8%(puduhh)\w4\n\nI just\w2 followed you around?\w8%(craeuhh)\w4\n\nI thought it was \w2me\w2 following \w2you\w2 around?\w8%(pudthink)\w4\n\nIf we both followed each other,\w4 how did we-\w2%(crae)\n\nHey,\w3 hey,\w3 look,\w3 there's someone watching over there.\w4%(pudhuh)\w8\n\nOh?\w8 %(pud)Ooooh,\w4 really.\w8\w4 %(pudhapi)\nHi there!\w8 %(pud)Don't mind us,\w4 we just got a bit lost here\w2.\w2.\w2. \x%(pudthink)\w8\w4Who are you,\w4 actually?"
 	
 	// Pronouns
 	"\n\n\_q\![*]\q[he/him,OnPronounsChange,he,1]"

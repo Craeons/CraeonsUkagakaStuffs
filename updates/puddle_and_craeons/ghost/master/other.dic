@@ -127,7 +127,7 @@ OnPronounsChange {
 	}
 	
 	if reference1 {
-		"%(craethink)I see... %(they)/%(them)/%(theirs), its it?%(crae) How about a name?\![open,inputbox,OnNameTeach,-1]"
+		"%(craethink)I see\w2.\w2.\w2. %(they)/%(them)/%(theirs),\w4 its it?\w8%(crae) How about a name?\![open,inputbox,OnNameTeach,-1]"
 	}
 }
 
@@ -137,31 +137,33 @@ OnNameTeach {
 	
 	case frenuser {
 		when "craeons" {
-			"%(pudhapi)Look, Crae, look! It's the big you! Did they come here to pick us...%(pudthink) Wait, they don't quite look like you. Maybe a bit sexier, even.%(craeangy)\f[height,-3](Don't flirt with my sexy alternate self while I'm right here...)%(pudhapi)\n\nShould I flirt with you in front of them instead, then?\e"
+			"%(pudhapi)Look,\w4 Crae,\w4 look!\w8 It's the big you!\w8 Did they come here to pick us\w2.\w2.\w2.%(pudthink)\w8 Wait,\w4 they don't quite look like you.\w8 Maybe a bit sexier,\w4 even.\w4%(craeangy)\w48\f[height,-3](Don't flirt with my sexy alternate self while I'm right here\w2.\w2.\w2.)\w4%(pudhapi)\w8\n\nShould I flirt with you in front of them instead,\w4 then?\e"
 		}
 		when "puddle" {
-			"%(pudhapi)Oh hey, it's the big me! Or...%(pudhuh) Someone who looks very like me. %(pudthink)Or... Not really. Hmm...\n%(pudsmile)Let's rummage through their files to know for sure~%(craesmirk)Is everyone going by %(username) so attractive, or is it just you guys? Heehee.%(pud)\n\nNah, sorry, it's just the one and only us~\e"
+			"%(pudhapi)Oh hey,\w4 it's the big me!\w8 Or\w2.\w2.\w2.\w2%(pudhuh)\w8 Someone who looks very like me.\w8 %(pudthink)Or\w2.\w2.\w2.\w2 Not really.\w8 Hmm\w2.\w2.\w2.\w2\n\w8%(pudsmile)Let's rummage through their files to know for sure~\w4%(craesmirk)\w8Is everyone going by %(username) so attractive,\w4 or is it just you guys?\w8 Heehee.\w4\w8%(pud)\n\nNah,\w4 sorry,\w4 it's just the one and only us~\e"
 		}
 		when "rain" {
-			"%(craehapi)Look, Puddle, it's Rainy~! Hiiii Rainy hiiiii~%(pudhapi)Rain hiiii hiiii look Rain look we're in da 'puter!!!!!\e"
+			"%(craehapi)Look,\w4 Puddle,\w4 it's Rainy~!\w8 Hiiii\w3 Rainy\w3 hiiiii~\w4\w8%(pudhapi)Rain hiiii hiiii \w3look Rain look we're in da 'puter!!!!!\e"
 		}
 		when "sebi" {
-			"%(crae)Hey there, Ketchup Twink.%(craesmirk) Yeah, that's right. I know what you are.%(pudhapi)Hiiiiiiiiiii Mr. Charmer~\e"
+			"%(crae)Hey there,\w4 Ketchup Twink.\w8%(craesmirk) Yeah,\w4 that's right.\w8 I know what you are.\w4\w8%(pudhapi)Hiiiii\w2iii\w2i\w2i\w2i Mr. Charmer~\e"
 		}
 		when "harune" {
-			"%(crae)OMG, it's harune!%(craehapi) Hiiiii harune, hope your day was good~%(pudhapi)Hey hey hey hello haruney want me %(pudsmirk)to google some wolfguys for you...%(pudhapi) (giggling)\e"
+			"%(crae)OMG,\w4 it's harune!\w8%(craehapi) Hiiiii harune,\w4 hope your day was good~\w4\w8%(pudhapi)Hey hey hey hello haruney want me\w2 %(pudsmirk)to google some wolfguys for you\w2.\w2.\w2.\w8%(pudhapi) (giggling)\e"
 		}
 		when "pixel" {
-			"%(pudhapi)Heya there puppyboy, looking handsome today~ Mwa~"
-			"%(pudhapi)Hiiii there princess~ %(pudsmirk)Hehe, welcoming me onto your personal computer, are you?"
+			"%(pudhapi)Heya there puppyboy,\w4 looking handsome today~\w8 Mwa~"
+			"%(pudhapi)Hiiii there princess~\w8 %(pudsmirk)Hehe,\w4 welcoming me onto your personal computer,\w4 are you?"
 			--
-			"%(craeblep)Get a room... %(craesmirk)oh, wait, I guess this kinda is one.\e"
+			"%(craeblep)Get a room\w2.\w2.\w2.\w8 %(craesmirk)Oh,\w4 wait,\w4 I guess this kinda is one.\e"
 		}
 		when "cel" {
-			"No way, it's our smartguy cel! Hello, cel, look, I'm da code now! Are you proud of me?%(craeangy)\f[height,-3](I'm the one who did the code, be prouder of me instead...)%(pudhapi)\n\n\f[height,-3](Don't worry, I'm soooo proud of you too~)\e"
+			"%(pud)No way,\w4 it's our smartguy cel!\w8 Hello,\w4 cel,\w4 look,\w4 I'm da code now!\w8 %(pudhapi)Are you proud of me?\w8%(craeangy)\w4\f[height,-3](I'm the one who did the code,\w4 be prouder of me instead\w2.\w2.\w2.\w2)\w4\w8%(pudhapi)\n\n\f[height,-3](Don't worry,\w4 I'm soooo proud of you too~)\e"
+		}
+		others {
+			"%(pudhapi)Neat!\w8 Okay,\w4 we'll be calling you %(username) from now on.\w8\w4%(crae)Nice to meetcha,\w4 %(username)~\e"
 		}
 	}
-	"%(pudhapi)Neat! Okay, we'll be calling you %(username) from now on.%(crae)Nice to meetcha, %(username)~"
 }
 
 //—————————————————————————————— User pronoun related ——————————————————————————————
