@@ -13,10 +13,10 @@ OnFirstBoot : all
 	"%(pudhuh)Huh-\w4 wha-\w4 how did we end up here?\w4%(craeblep)\w8Dunno,\w4 you tell me\w2.\w2.\w2.\w8%(puduhh)\w4\n\nI just\w2 followed you around?\w8%(craeuhh)\w4\n\nI thought it was \w2me\w2 following \w2you\w2 around?\w8%(pudthink)\w4\n\nIf we both followed each other,\w4 how did we-\w2%(crae)\n\nHey,\w3 hey,\w3 look,\w3 there's someone watching over there.\w4%(pudhuh)\w8\n\nOh?\w8 %(pud)Ooooh,\w4 really.\w8\w4 %(pudhapi)\nHi there!\w8 %(pud)Don't mind us,\w4 we just got a bit lost here\w2.\w2.\w2. \x%(pudthink)\w8\w4Who are you,\w4 actually?"
 	
 	// Pronouns
-	"\n\n\_q\![*]\q[he/him,OnPronounsChange,he,1]"
-	"\n\![*]\q[she/her,OnPronounsChange,she,1]"
-	"\n\![*]\q[it/its,OnPronounsChange,it,1]"
-	"\n\![*]\q[they/them,OnPronounsChange,they,1]\e"
+	"\n\n\_q\![*]\q[he/him,OnPronounsTeach,he,1]"
+	"\n\![*]\q[she/her,OnPronounsTeach,she,1]"
+	"\n\![*]\q[it/its,OnPronounsTeach,it,1]"
+	"\n\![*]\q[they/them,OnPronounsTeach,they,1]\e"
 }
 
 OnInitialize

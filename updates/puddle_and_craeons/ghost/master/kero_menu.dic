@@ -11,22 +11,23 @@ OnKeroMenu : all
 	"\n\n\_q"
 	
 	//Put anything you want here, anything at all. For example, here's how you can add your own menu... You can make as many like this as you want! Uncomment if you want to test it out, or erase if you don't want it
-	"\![*]\q[Replay Installation Dialogue,OnFirstBoot]\n"
-	"\![*]\q[Change Your Pronouns,pickpronouns]\n"
-	"\![*]\q[Change Your Username,usernamechange]\n\n"
+	"\![*]\q[Replay Installation Dialogue,OnFirstBoot,0]\n"
+	"\![*]\q[Change Your Pronouns,OnPronounsChange]\n"
+	"\![*]\q[Change Your Username,OnNameChange]\n\n"
 	
 	"\![*]\q[Nevermind,blank]"
 }
 
-usernamechange {
+OnNameChange : all {
+	"%(crae)name changing menu dialogue blablablablablablablabla%(pud)What?"
 	"\![open,inputbox,OnNameTeach,-1]"
 }
 
-pickpronouns : all {
-	"\n\n\_q\![*]\q[he/him,OnPronounsChange,he,1]"
-	"\n\![*]\q[she/her,OnPronounsChange,she,1]"
-	"\n\![*]\q[it/its,OnPronounsChange,it,1]"
-	"\n\![*]\q[they/them,OnPronounsChange,they,1]"
+OnPronounsChange : all {
+	"\n\n\_q\![*]\q[he/him,OnPronounsTeach,he,0]"
+	"\n\![*]\q[she/her,OnPronounsTeach,she,0]"
+	"\n\![*]\q[it/its,OnPronounsTeach,it,0]"
+	"\n\![*]\q[they/them,OnPronounsTeach,they,0]"
 	"\n\n\![*]\q[Back,OnKeroMenu]\e"
 }
 
