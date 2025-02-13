@@ -137,7 +137,7 @@ OnNameTeach {
 	
 	case frenuser {
 		when "craeons" {
-			"%(pudhapi)Look,\w4 Crae,\w4 look!\w8 It's the big you!\w8 Did they come here to pick us\w2.\w2.\w2.%(pudthink)\w8 Wait,\w4 they don't quite look like you.\w8 Maybe a bit sexier,\w4 even.\w4%(craeangy)\w48\f[height,-3](Don't flirt with my sexy alternate self while I'm right here\w2.\w2.\w2.)\w4%(pudhapi)\w8\n\nShould I flirt with you in front of them instead,\w4 then?\e"
+			"%(pudhapi)Look,\w4 Crae,\w4 look!\w8 It's the big you!\w8 Did they come here to pick us\w2.\w2.\w2.%(pudthink)\w8 Wait,\w4 they don't quite look like you.\w8 Maybe a bit sexier,\w4 even.\w4%(craeangy)\w4\f[height,-3](Don't flirt with my sexy alternate self while I'm right here\w2.\w2.\w2.)\w4%(pudhapi)\w8\n\nShould I flirt with you in front of them instead,\w4 then?\e"
 		}
 		when "puddle" {
 			"%(pudhapi)Oh hey,\w4 it's the big me!\w8 Or\w2.\w2.\w2.\w2%(pudhuh)\w8 Someone who looks very like me.\w8 %(pudthink)Or\w2.\w2.\w2.\w2 Not really.\w8 Hmm\w2.\w2.\w2.\w2\n\w8%(pudsmile)Let's rummage through their files to know for sure~\w4%(craesmirk)\w8Is everyone going by %(username) so attractive,\w4 or is it just you guys?\w8 Heehee.\w4\w8%(pud)\n\nNah,\w4 sorry,\w4 it's just the one and only us~\e"
@@ -216,6 +216,11 @@ p
 	else; _argv[1] //he is/she is
 }
 
+/*
+An example of the above setup:
+"%(they) %(p('were','was')) looking for that earlier, I'll ask if %(they)'%(p('ve','s')) found it."
+*/
+
 frenuser {
 	_username = TOLOWER(username)
 	case _username {
@@ -229,21 +234,3 @@ frenuser {
 		others; "stranger"
 	}
 }
-
-/*
-
-An example of the above setup:
-"%(they) %(p('were','was')) looking for that earlier, I'll ask if %(they)'%(p('ve','s')) found it."
-
-If using they, the %(p) functions will return the first word specified, resulting in:
-"they were looking for that earlier, I'll ask if they've found it."
-
-If not using they, for example if using she, it will return the second specified word instead, resulting in:
-"she was looking for that earlier, I'll ask if she's found it."
-
-With this function, you can quickly customize words that need to change based on whether it should be singular or plural. Just remember; the %(p) function is set up so that the first word you specify matches with the 'they' labels used on the pronoun functions. You can always switch that around if you like, too.
-
-*/
-
-//This just makes %(username) match with the username determined by the SSP prefs, rather than having to use the %username environment variable which is *not* the same and which you can't do things like TOUPPER to.
-//If you want to have the user be able to set a nickname or something, you may want to change username to a variable instead and get rid of this!

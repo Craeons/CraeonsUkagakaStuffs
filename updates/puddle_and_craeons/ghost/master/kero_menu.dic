@@ -1,7 +1,6 @@
 KeroMenuGreetings : nonoverlap
 {
-	"\1Hi."
-	"\1What's up?"
+	"%(crae)check it out i got them BAD ASS DEBUG optionss"
 }
 
 //Because there is an all modifier here, you don't need to write -- between menu options
@@ -12,9 +11,23 @@ OnKeroMenu : all
 	"\n\n\_q"
 	
 	//Put anything you want here, anything at all. For example, here's how you can add your own menu... You can make as many like this as you want! Uncomment if you want to test it out, or erase if you don't want it
-	//"\![*]\q[Some menu option,OnSomeMenu]\n\n"
+	"\![*]\q[Replay Installation Dialogue,OnFirstBoot]\n"
+	"\![*]\q[Change Your Pronouns,pickpronouns]\n"
+	"\![*]\q[Change Your Username,usernamechange]\n\n"
 	
 	"\![*]\q[Nevermind,blank]"
+}
+
+usernamechange {
+	"\![open,inputbox,OnNameTeach,-1]"
+}
+
+pickpronouns : all {
+	"\n\n\_q\![*]\q[he/him,OnPronounsChange,he,1]"
+	"\n\![*]\q[she/her,OnPronounsChange,she,1]"
+	"\n\![*]\q[it/its,OnPronounsChange,it,1]"
+	"\n\![*]\q[they/them,OnPronounsChange,they,1]"
+	"\n\n\![*]\q[Back,OnKeroMenu]\e"
 }
 
 /*

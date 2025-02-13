@@ -70,6 +70,9 @@ RandomTalk : nonoverlap_pool
 	{
 		"%(craethink)You think we should just\w2.\w2.\w2.\w8 leave?\w4%(pudthink)\w8Sure,\w4 what's stopping us?\w8%(pud) But,\w4 do we want to leave?\w8%(crae)\w4\n\n.\w2.\w2.\w8\n.\w2.\w2.\w8Nah,\w4 %(craesnooze)I'm too comfy here.\w8%(pudsmile)\w8\n\nIf you say so."
 	}
+	{
+		"%(pudhmm)%(craethink)Is something bothering you?\w8\w4%(pud)Yes.\w8 Like,\w4 10 different thoughts or so.\w4\w8%(crae)\n\nDo you\w2.\w2.\w2.\w8 Wanna talk about it?\w4\w8%(pudhapi)\n\nYeah sure,\w4%(pudsmile) just name a number and I'll pull one of em randomly.\w8%(pudhapi) Like a gachapon!\e"
+	}
 	
 	// "\0\s[0]A quick overview of the built in ways to address the user in this template, which are all decided through the SSP preferences:\w8\n%(username) %(they) %(them) %(their) %(theirs) %(themself)\w8\nAnd an example of the " + '%(p)' + " function: %(they) %(p('are','is')) working on a ghost"
 }

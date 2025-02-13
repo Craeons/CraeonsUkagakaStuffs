@@ -58,7 +58,26 @@ OnBoot
 		"\0\s[0]Hello %(username).\w8 Good to see you."
 		"\0\s[0]Hello.\w8 Ready to make something cool?"
 	} */
-	"DUMMY TEXT\e"
+	case hour {
+		when 0-5 {
+			"%(pudsnooze)%(craesnooze)Hmmmghh,,, it's too early for this... Can't you put us back for right now?\0(Yawns)\e"
+		}
+		when 6-11 {
+			"%(pudhapi)Good morny, %(username)~%(crae)Had a nice brekky?\e"
+		}
+		when 12-15 {
+			"%(pud)Lunch time... I want lunch....\e"
+		}
+		when 16-18 {
+			"%(craethink)Wonder what we're gonna do with our afternoon?%(pudsmirk)I have a few ideas...\e"
+		}
+		when 19-22 {
+			"%(pud)Dinner... I want dinner...%(crae)(Puddle's looking tasty today...)\e"
+		}
+		others {
+			"%(pudsnooze)%(craesnooze)\_szzzzzzz\e"
+		}
+	}
 }
 
 OnClose
