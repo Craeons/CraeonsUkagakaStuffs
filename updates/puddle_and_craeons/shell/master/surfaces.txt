@@ -16,12 +16,12 @@ descript
 surface0
 {
 	//top of head collision
-	collisionex0,head,polygon,120,100,210,100,220,160,100,160
+	collisionex0,head,polygon,145,102,186,102,186,128,211,128,222,161,100,162,112,128,145,128
 	//horns collision
 	//left
-	collisionex1,horn,rect,111,80,146,140
+	collisionex1,lefthorn,rect,111,80,146,140
 	//right
-	collisionex2,horn,rect,184,80,212,140
+	collisionex2,righthorn,rect,184,80,212,140
 	//tail collision
 	collisionex3,tail,polygon,260,303,208,85,350,85,350,334,234,330
 	//nose collision
@@ -120,16 +120,22 @@ surface4
 {
 	/// --- SAD ---
 	element0,overlay,surface4.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface5
 {
 	/// --- HAPPY ---
 	element0,overlay,surface5.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface6
 {
 	/// --- CONTENT ---
 	element0,overlay,surface6.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface7
 {
@@ -267,16 +273,22 @@ surface15
 {
 	// --- HAPPY ---
 	element0,overlay,surface15.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface16
 {
 	// --- SMILING ---
 	element0,overlay,surface16.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface17
 {
 	// --- ANGRY ---
 	element0,overlay,surface17.png,0,0
+	//top of head collision
+	collisionex0,head,polygon,120,100,210,100,220,160,100,160
 }
 surface18
 {

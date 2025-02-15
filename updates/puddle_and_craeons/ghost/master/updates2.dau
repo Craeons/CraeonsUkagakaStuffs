@@ -1,12 +1,12 @@
-ghost/master/aitalk.dicaf1eb70e395d0536a3c292eacf8481ddsize=4964date=2025-02-13T09:14:31charset=OSNative
+ghost/master/aitalk.dicc7e77445a89cd00bcff22ed804f573cfsize=6640date=2025-02-15T14:11:04charset=OSNative
 ghost/master/boot.dicbbee7b951c34ca7614cf8c5d7740c876size=3596date=2025-02-13T08:59:31
 ghost/master/descript.txt5103ea58f1976ef680657a17872816c7size=234date=2025-02-08T21:17:58
 ghost/master/emerg.dicc7cb6eacd3262003fef909c382a6fefesize=351date=2023-04-14T14:45:50
 ghost/master/icon.ico9c41d7163faa06827774a4a8a279173esize=99797date=2023-02-02T02:36:51
 ghost/master/kero_menu.dic1197b43a126f7223fffdcadfba1cd5fcsize=1624date=2025-02-13T09:18:05
-ghost/master/meta.dic969657a3596e503fdea40f9716081169size=5500date=2025-02-10T08:47:17
-ghost/master/mouse.dic1d87248b75f003377d1a8bfa58b55248size=1030date=2025-02-06T14:52:02
-ghost/master/other.dicc53b6c7a4acbe1ab3714b23d531e1baasize=8954date=2025-02-13T09:19:05
+ghost/master/meta.dicfa668c3012b638583e0c0be5427a01bbsize=5771date=2025-02-15T11:07:18
+ghost/master/mouse.dic90d10fc0df7b68886b65df91ff24031fsize=2391date=2025-02-15T11:01:18
+ghost/master/other.dic01baaa33cc12291b929be79a9d1dd5c2size=9564date=2025-02-15T14:09:40
 ghost/master/sakura_menu.dica36a04b7ec719f307e2165090ac6e2a4size=1552date=2023-05-06T15:47:21
 ghost/master/surfaces.dic9c260da78ecb777ad04c9ff6d0c395bbsize=805date=2025-02-10T08:30:39
 ghost/master/word.dicfaf54aba2446bdeea31043a729d62f41size=335date=2025-02-10T21:04:45
@@ -77,6 +77,6 @@ shell/master/surface6.pngfda55afbf5ed42e300524403a30ae713size=71519date=2025-
 shell/master/surface7.png48268b82ed4158f183e487f87153f12esize=71699date=2025-02-08T20:45:48
 shell/master/surface8.png761063b4f8f041fdaec41f8f071c0611size=71990date=2025-02-08T20:43:26
 shell/master/surface9.png37de925adc95c8391d99aa6016664af7size=70121date=2025-02-08T20:42:52
-shell/master/surfaces.txtf716cde7b7fe3f0cb8de25bdf8810604size=9879date=2025-02-12T05:46:09
+shell/master/surfaces.txt20b08632fc0798c3747d5050a277a15fsize=10436date=2025-02-15T10:57:00
 thumbnail.pna6c45f40574939467ec59f0482700af9dsize=622date=2023-02-04T05:08:43
 thumbnail.png3c99beddc2aeaa5cb23a3d0273dad396size=5739date=2023-02-04T05:08:27

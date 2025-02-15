@@ -74,7 +74,7 @@ RandomTalk : nonoverlap_pool
 		"%(pudhmm)%(craethink)Is something bothering you?\w8\w4%(pud)Yes.\w8 Like,\w4 10 different thoughts or so.\w4\w8%(crae)\n\nDo you\w2.\w2.\w2.\w8 Wanna talk about it?\w4\w8%(pudhapi)\n\nYeah sure,\w4%(pudsmile) just name a number and I'll pull one of em randomly.\w8%(pudhapi) Like a gachapon!\e"
 	}
 	{
-		"%(crae)Have you been to %(username)'s world,\w4 Pudli?\w4\w8%(pudthink)Uhhh dunno,\w4 do they have Homestuck there?\n\nI think so?\w4\w8%(pudblep)\n\nThen yeah, I did.\e"
+		"%(crae)Have you been to %(username)'s world,\w4 Pudli?\w4\w8%(pudthink)Uhhh\w2 dunno,\w4 do they have Homestuck there?%(craeuhh)\n\nI think so?\w4\w8%(pudblep)\n\nThen yeah,\w4 I did.\e"
 	}
 	{
 		"%(pudthink)(He looks bothered by something.)\e"
@@ -90,6 +90,21 @@ RandomTalk : nonoverlap_pool
 	}
 	{
 		"%(pud)So,\w4 remember I promised to teach you some cooking?\w8 Wanna do it after %(username) lets us off?\w4\w8%(craehapi)Sure~\w2!\w8 %(craethink)What do we wanna make,\w4 though?\w4\w8%(pud)\n\nI was thinking\w2.\w2.\w2.\w4 %(tastyfood).\w4\w8%(craehapi)\n\nSounds great,\w4 count me in.\w8 Heehee.\e"
+	}
+	{
+		"%(crae)Have you ever wanted to become a god?\w4%(pudthink)\w4\1 Not,\w4 like,\w4 God of a whole world God,\w4 but maybe a local spirit or some idol worshipped by cave people or something.\w4\w8%(pud)Have you?\w8%(pudhapi) Maybe next time we travel I can lead you to a world where you can be a petty god,\w4 hehe.\e"
+	}
+	{
+		"%(pud)Genuely-%(crae)Genuinely.\w4\w8%(pudthink)\n\nGeniuly-%(crae)\n\nGenuinely.\w4\w8%(puduhh)\n\nGeniuily-%(crae)\n\nGenuinely.\w4\w8%(pud)\n\nGenuinely,\w4 I\w2.\w2.\w2.\w8\w8\w8 \n%(pudthink)Wait,\w4 I forgot what I was about to say.\w8%(craesmile)\w4\n\n\f[height,-5](I want to \w2violently \w2make \w2out with him \w2Right \w2Now.)\e"
+	}
+	{
+		"%(craehapi)Hey there,\w4 handsome.\w8 What a surprise to run into you here\w2.\w2.\w2.\w4\w8%(pud)Puft,\w4 we've been sitting here together the entire time\w2.\w2.\w2.\e"
+	}
+	{
+		"%(craehapi)You're lucky you're so cute,\w4 or it'd have been the end for you.\w4\w8%(pudhuh)Huh?????\e"
+	}
+	{
+		"%(pud)So,\w4 what's your body count?\w4\w8%(craethink)Hmm,\w4 I dunno\w2.\w2.\w2.\w8 I stopped counting after,\w4 like,\w4 30?\w8 But there was also\w2.\w2.\w2.\w8\n\f[height,-5]and I guess that counts too\w2.\w2.\w2.\w8 (mumbling some more)\w8\n\f[height,default]Maybe something like,\w4 %(pudhuh)\1over 110 or so\w2.\w2.\w2.%(pudsmirk)\n\nDamn bitch,\w4 you're such a hoe.\w4\w8%(craehuh)Eh?\w8 Oh-\w4%(crae) Ooooh,\w4 you mean people I slept with!\w8%(craesmile) Heehee.\w8 Well,\w4 don't worry,\w4 that list only has a certain person on it.\w8\w4%(pudhuh)Huh?\w8%(pudthink) Wait,\w4 what were you counting,\w4 then???\w4\w8%(craesmirk)\n\nDon't worry bout it.\e"
 	}
 	
 	// "\0\s[0]A quick overview of the built in ways to address the user in this template, which are all decided through the SSP preferences:\w8\n%(username) %(they) %(them) %(their) %(theirs) %(themself)\w8\nAnd an example of the " + '%(p)' + " function: %(they) %(p('are','is')) working on a ghost"

@@ -69,7 +69,7 @@ OnNarLocation
 
 OnUpdateBegin
 {
-	"\0\s[0]Checking for updates.\w8"
+	"%(crae)Updating,\w4 huh?\w8%(craeuhh) I'll check the files\w2.\w2.\w2.\w8"
 }
 
 //reference0 is the number of new files, starting from 0
@@ -81,7 +81,7 @@ OnUpdateReady
 	_s = ""; _are = "is"
 	if reference0 != 1; {_s = "s"; _are = "are"}
 	
-	"\0\s[0]There %(_are) %(reference0) new file%(_s).\w8"
+	"%(crae)Looks like there %(_are) %(reference0) new file%(_s) for us.\w8"
 }
 
 //When the update finishes. Don't forget to initialize any new variables you've created! I highly highly recommend using OnInitialize for this (it's in boot.dic), in case the user updates via the ghost explorer or some other means.
@@ -90,11 +90,11 @@ OnUpdateComplete
 {
 	if reference0 == "none"
 	{
-		"\0\s[0]There are no new files."
+		"%(crae)Mm,\w4 there weren't any new files.\w8%(craeblep) Apologize to me for wasting my time."
 	}
 	else
 	{
-		"\0\s[0]Update complete."
+		"%(crae)Alrighty boss, finished adding da new files~\w4\w8%(pud)What was in there?\w8%(craesmirk)\w4\n\nThat's for me to know,\w4 and for%(craeblep) you guys to find out.\e"
 	}
 }
 

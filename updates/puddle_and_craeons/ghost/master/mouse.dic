@@ -7,11 +7,38 @@ OnMouseDoubleClick
 		//If you want to add double click interactions, reference4 will be the name of the hitbox the mouse is over
 		if reference3 == 0
 		{
-			OnSakuraMenu
+			case reference4 {
+				when "lefthorn" {
+					"%(pud)\i[6]\e"
+					{
+						"%(pud)\i[6]Nya?\e"
+						"%(pud)\i[6]Nyaw?\e"
+						"%(pud)\i[6]?\e"
+					}
+				}
+				when "righthorn" {
+					"%(pud)\i[7]\e"
+					"%(pud)\i[8]\e"
+					{
+						"%(pud)\i[7]Nyeh?\e"
+						"%(pud)\i[7]Nya?\e"
+					}
+				}
+				others; OnSakuraMenu
+			}
 		}
 		else
 		{
-			OnKeroMenu
+			case reference4 {
+				when "wing" {
+					"%(crae)\i[6]\e"
+					{
+						"%(crae)\i[6]Mm?\e"
+						"%(crae)\i[6]Piou?\e"
+					}
+				}
+				others; OnKeroMenu
+			}
 		}
 	}
 }
@@ -34,7 +61,22 @@ OnMouseMove.Sakura
 {
 	if reference4 == "head"
 	{
-		"\0\s[0]Petting??"
+		"%(pudhapi)*Purrr*\w2.\w2.\w2."
+		"%(pudhapi)Cool,\w4 scratch around there more~"
+		"%(pudhapi)Keep petting or I'll chomp off your fingers~"
+		{
+			"%(pudhapi)A lil bit to the right\w2.\w2.w2."
+			"%(pudhapi)A lil bit to the left\w2.\w2.\w2."
+		}
+		"%(pudhapi)Why are you petting me?\w8 Do I look like a cat to you?\w4\w8%(craeuhh)As opposed to what,\w4 a dog\w2.\w2.\w2.\w2?\e"
+		--
+		if (RAND(10) < 5) {
+			"\w8%(craeangy)\w4\f[height,-5]"
+			--
+			"(Hrmph\w2.\w2.\w2.\w8 I wanna get petted too\w2.\w2.\w2.\w2)\e"
+			"(Why can't \w3\f[italic,1]I\f[italic,default]\w3 get some wing scritchies?)\e"
+			"(Looks comfy\w2.\w2.\w2.\w2)\e"
+		}
 	}
 }
 
@@ -42,7 +84,18 @@ OnMouseMove.Kero
 {
 	if reference4 == "head"
 	{
-		"\1\s[10]AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"%(craehapi)Mmm... Right around the feathers, please~ ♥"
+		"%(craehapi)*Peep peep*"
+		"%(craehapi)Wehhheheh\w2.\w2.\w2."
+		"%(craehapi)Comfy\w2.\w2.\w2."
+		--
+		if (RAND(10) < 3) {
+			"\w8%(pudcri)\w4\f[height,-5]"
+			--
+			"(Hey, I want petting too...)\e"
+			"(It looks comfy...)\e"
+			"(Do they like it more than \w3\f[italic,1]my\f[italic,default]\w3 petting and scritchies?)\e"
+		}
 	}
 }
 
