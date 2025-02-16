@@ -7,8 +7,9 @@ OnFirstBoot : all
 	stroke = 0
 	LastTalk = ""
 	username = "ANONYMOUS"
-	pronouns = "they"
+	pronouns = "neutral"
 	currentstate = "default"
+	hourlytalking = false
 	
 	"%(pudhuh)Huh-\w4 wha-\w4 how did we end up here?\w4%(craeblep)\w8Dunno,\w4 you tell me\w2.\w2.\w2.\w8%(puduhh)\w4\n\nI just\w2 followed you around?\w8%(craeuhh)\w4\n\nI thought it was \w2me\w2 following \w2you\w2 around?\w8%(pudthink)\w4\n\nIf we both followed each other,\w4 how did we-\w2%(crae)\n\nHey,\w3 hey,\w3 look,\w3 there's someone watching over there.\w4%(pudhuh)\w8\n\nOh?\w8 %(pud)Ooooh,\w4 really.\w8\w4 %(pudhapi)\nHi there!\w8 %(pud)Don't mind us,\w4 we just got a bit lost here\w2.\w2.\w2. \x%(pudthink)\w8\w4Who are you,\w4 actually?"
 	
@@ -27,6 +28,7 @@ OnInitialize
 	//If you add new variables in updates, I recommend initializing them like so:
 	//if !ISVAR("NewVariable"); NewVariable = 0
 	//This means that it will only set the new variable if the user doesn't already have it, so that their variables don't get overwritten
+	if !ISVAR("hourlytalking"); hourlytalking = false
 	
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
@@ -60,30 +62,62 @@ OnBoot
 	} */
 	case hour {
 		when 0-5 {
-			"%(pudsnooze)%(craesnooze)Hmmmghh,,, it's too early for this... Can't you put us back for right now?\0(Yawns)\e"
+			"%(pudsnooze)%(craesnooze)Hmmmghh\w2,\w2,\w2,\w8 it's too early for this\w2.\w2.\w2.\w8 Can't you put us back for right now?\0%(nartxt)(Yawns)\e"
 		}
 		when 6-11 {
-			"%(pudhapi)Good morny, %(username)~%(crae)Had a nice brekky?\e"
+			"%(pudhapi)Good morny,\w4 %(username)~\w4\w8%(crae)Had a nice brekky?\e"
 		}
 		when 12-15 {
-			"%(pud)Lunch time... I want lunch....\e"
+			"%(pudcri)Lunch time\w2.\w2.\w2.\w8 I want lunch\w2.\w2.\w2.\e"
 		}
 		when 16-18 {
-			"%(craethink)Wonder what we're gonna do with our afternoon?%(pudsmirk)I have a few ideas...\e"
+			"%(craethink)Wonder what we're gonna do with our afternoon?\w4\w8%(pudsmirk)I have a few ideas\w2.\w2.\w2.\e"
 		}
 		when 19-22 {
-			"%(pud)Dinner... I want dinner...%(crae)(Puddle's looking tasty today...)\e"
+			"%(pudcri)Dinner\w2.\w2.\w2.\w8 I want dinner\w2.\w2.\w2.\w4\w8%(crae)%(smalltxt)Puddle's looking tasty today\w2.\w2.\w2.\e"
 		}
 		others {
-			"%(pudsnooze)%(craesnooze)\_szzzzzzz\e"
+			"%(pudsnooze)%(craesnooze)\_s\w3z\w3z\w3z\w3z\w3z\w3z\w3z\e"
 		}
 	}
 }
 
 OnClose
 {
-	"\0\s[0]Farewell."
-	"\0\s[0]Goodbye."
+	case hour {
+		when 0-5 {
+			"%(pudsnooze)%(craesnooze)%(nartxt)(Yawns)%(xnartxt)\n\w8Puds,\w4 let's go back to bed together\w2.\w2.\w2.\w8\w4\0Sounds good\w2.\w2.\w2."
+		}
+		when 6-11 {
+			"%(craesnooze)%(pudhapi)Oh,\w4 bye,\w4 %(username)~\1\w4\w8Wonder if I can fit in a nap before work starts\w2.\w2.\w2.\w4\w8%(pud)You're still eepy?"
+		}
+		when 22-23 {
+			"%(pudsmile)Goodnight,\w4 %(username)~\w4\w8%(craeblep)Sleep \w3BADLY\w3 and have \w3BAD\w3 dreams!\w4\w8 Ahahahahahaha!"
+		}
+		others {
+			"%(pudhapi)Bye bye,\w4 %(username)~\w4\w8%(crae)%(username) isn't gonna be watching now,\w4 let's make ou-\-"
+		}
+	}
 	--
 	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
+}
+
+// Occurs at the start of each hour change
+OnHourTimeSignal {
+	if (hourlytalking == true) {
+		if ((hour == 22)&&(frenuser == "craeons")) {
+			"%(crae)Yo me,\w4 don't you think it's about time to head to bed?\e"
+		} elseif ((hour == 1)&&(frenuser == "puddle")) {
+			"%(pud)Hey other me, it's one in the morning~\w8 Better keep an eye on the time,\w4 or someone's gonna chew you out,\w4 heh.\w4\w8%(craeblep)Yeah,\w4 I\w3 will.\e"
+		} elseif ((hour == 2)&&(frenuser == "puddle")) {
+			"%(pud)%(craehapi)Oh Pudliii~\w8 It's time to go to beeeeed~\w8\w4%(pudcri)Nooooo~\w8 I wanna stay with my Craeons\w2s\w2s\w2s\w2~\e"
+		} else {
+			"%(crae)The time's %(hour):00 now.\e"
+			"%(pud)Hey %(username), it's %(hour):00.\e"
+			"%(pudthink)It's %(hour):00\w2.\w2.\w2.\w8 unless %(username) changed %(their) system settings.\w4\w8%(craesmile)Now,\w4 why would anyone do that?\e"
+			"%(craesnooze)Mmmmm\w2.\w2.\w2.\w8 it's %(hour) or something\w2.\w2.\w2.\w8 %(smalltxt)The time,\w4 I mean\w2.\w2.\w2.\w4\w8%(pudsmirk)are you falling asleep?\e"
+			"%(pud)Looks like it's %(hour):00.\e"
+			if (RAND(30) < 7); "%(pudthink)Huh,\w4 it's %(hour):00.\w4\w8%(crae).\w2.\w2.\w4\w8%(pud)\n\n\w2.\w2.\w2.\w2What?\w4\w8%(crae)\n\nNothing,\w4 I just thought you were gonna say something about this?\w4\w8%(pudblep)\n\nWhat,\w4 do you have something cool to say about %(hour):00?\w4\w8%(craesmirk)\n\nNo.\w4\w8%(pudangy)\n\nThen what was the point of this?\e"
+		}
+	}
 }

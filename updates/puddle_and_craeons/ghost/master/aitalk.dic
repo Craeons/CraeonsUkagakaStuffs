@@ -35,7 +35,7 @@ RandomTalk : nonoverlap_pool
 		"\w4\w8%(pud)\n\nHey, guess what?\w4\w8%(crae)\n\nWhat?\w4%(pudhapi)\w8\n\nI love you~\w4%(craehapi)\w8\n\nAww..."
 	}
 	{
-		"%(crae)So,\w4 what do you feel about this being on %(user)'s computer so far?\w8%(pud)It's pretty warm and comfy here,\w4 y'know.\w8 But,\w4 like.%(pudthink)\w8 Sometimes I feel itchy for no reason.\w4%(craehuh)\n\n\w4It sounds like you have bugs\w2.\w2.\w2.\e"
+		"%(crae)So,\w4 what do you feel about this being on %(username)'s computer so far?\w8%(pud)It's pretty warm and comfy here,\w4 y'know.\w8 But,\w4 like.%(pudthink)\w8 Sometimes I feel itchy for no reason.\w4%(craehuh)\n\n\w4It sounds like you have bugs\w2.\w2.\w2.\e"
 	}
 	{
 		"%(pudthink)I really wanna eat some %(tastyfood) right now\w2.\w2.\w2.\w8\w4%(craecri)Can \w8\w4I\w8\w4 have some\w2.\w2.\w2.\e"
@@ -77,15 +77,17 @@ RandomTalk : nonoverlap_pool
 		"%(crae)Have you been to %(username)'s world,\w4 Pudli?\w4\w8%(pudthink)Uhhh\w2 dunno,\w4 do they have Homestuck there?%(craeuhh)\n\nI think so?\w4\w8%(pudblep)\n\nThen yeah,\w4 I did.\e"
 	}
 	{
+		"\0%(nartxt)"
+		--
 		"%(pudthink)(He looks bothered by something.)\e"
 		"%(pudhapi)(You can hear it purring slightly.)\e"
-		"%(pud)(You notice they're looking at Puft, not blinking.0\e"
+		"%(pud)(You notice they're looking at Puft, not blinking.)\e"
 		"%(pudsmile)(You notice they keep looking at Puft and smiling.)\e"
-		"%(pud)(They look like they're planning something naughty.)\e"
-		"%(pud)(He looks kinda bored.)\e"
+		"%(pudsmirk)(They look like they're planning something naughty.)\e"
+		"%(pudbored)(He looks kinda bored.)\e"
 	}
 	{
-		"%(pud)(Staaaaaaaaaaare.)%(crae)Hey, whatcha lookin' at?\w4\w8%(pudhapi)\n\nYou~\e"
+		"%(pud)%(nartxt)(Staaaaaaaaaaare.)%(xnartxt)%(crae)Hey, whatcha lookin' at?\w4\w8%(pudhapi)\n\nYou~\e"
 		"%(crae)You've been staring at me for the past hour,\w4%(craethink) is something up?\w8\w4%(pudhapi)I'm just enjoying the view~\e"
 	}
 	{
@@ -104,7 +106,7 @@ RandomTalk : nonoverlap_pool
 		"%(craehapi)You're lucky you're so cute,\w4 or it'd have been the end for you.\w4\w8%(pudhuh)Huh?????\e"
 	}
 	{
-		"%(pud)So,\w4 what's your body count?\w4\w8%(craethink)Hmm,\w4 I dunno\w2.\w2.\w2.\w8 I stopped counting after,\w4 like,\w4 30?\w8 But there was also\w2.\w2.\w2.\w8\n\f[height,-5]and I guess that counts too\w2.\w2.\w2.\w8 (mumbling some more)\w8\n\f[height,default]Maybe something like,\w4 %(pudhuh)\1over 110 or so\w2.\w2.\w2.%(pudsmirk)\n\nDamn bitch,\w4 you're such a hoe.\w4\w8%(craehuh)Eh?\w8 Oh-\w4%(crae) Ooooh,\w4 you mean people I slept with!\w8%(craesmile) Heehee.\w8 Well,\w4 don't worry,\w4 that list only has a certain person on it.\w8\w4%(pudhuh)Huh?\w8%(pudthink) Wait,\w4 what were you counting,\w4 then???\w4\w8%(craesmirk)\n\nDon't worry bout it.\e"
+		"%(pud)So,\w4 what's your body count?\w4\w8%(craethink)Hmm,\w4 I dunno\w2.\w2.\w2.\w8 I stopped counting after,\w4 like,\w4 30?\w8 But there was also\w2.\w2.\w2.\w8\n%(smalltxt)and I guess that counts too\w2.\w2.\w2.\w8 %(nartxt)(mumbling some more)%(xnartxt)\w8\n%(deftxt)Maybe something like,\w4 %(pudhuh)\1over 110 or so\w2.\w2.\w2.%(pudsmirk)\n\nDamn bitch,\w4 you're such a hoe.\w4\w8%(craehuh)\n\nEh?\w8 Oh-\w4%(crae) Ooooh,\w4 you mean people I slept with!\w8%(craesmile) Heehee.\w8 Well,\w4 don't worry,\w4 that list only has a certain person on it.\w8\w4%(pudhuh)\n\nHuh?\w8%(pudthink) Wait,\w4 what were you counting,\w4 then???\w4\w8%(craesmirk)\n\nDon't worry bout it.\e"
 	}
 	
 	// "\0\s[0]A quick overview of the built in ways to address the user in this template, which are all decided through the SSP preferences:\w8\n%(username) %(they) %(them) %(their) %(theirs) %(themself)\w8\nAnd an example of the " + '%(p)' + " function: %(they) %(p('are','is')) working on a ghost"

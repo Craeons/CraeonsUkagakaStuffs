@@ -1,4 +1,23 @@
 // .dic file for calling expressions
+// also i ended up adding other useful stuff oops
+
+// Text tags
+nartxt {
+	"\![set,serikotalk,0]\f[italic,1]"
+}
+xnartxt {
+	"\![set,serikotalk,1]\f[italic,default]"
+}
+
+smalltxt {
+	"\f[height,-5]"
+}
+deftxt {
+	"\f[height,default]"
+}
+bigtxt {
+	"\f[height,+6]"
+}
 
 // Puddle's expressions
 pud {
@@ -40,6 +59,9 @@ pudsmirk {
 pudgaming {
 	"\0\s[1103]"
 }
+pudbored {
+	"\0\s[9]\i[2]"
+}
 
 // Craeons' expressions
 crae {
@@ -80,4 +102,7 @@ craesmirk {
 }
 craegaming {
 	"\1\s[2103]"
+}
+craebored {
+	"\1\s[19]\i[2]"
 }

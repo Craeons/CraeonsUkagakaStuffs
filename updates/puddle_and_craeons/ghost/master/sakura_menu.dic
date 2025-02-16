@@ -1,7 +1,9 @@
 SakuraMenuGreetings : nonoverlap
 {
-	"Hello."
-	"How can I help you?"
+	"%(pud)Anything on your mind?"
+	"%(pudblep)Stop poking at my tummy,\w4 only puft is allowed to do this\w2.\w2.\w2."
+	"%(pudcri)You want this mere lil guy to do something\w2.\w2.\w2?"
+	"%(pudcri)Noooo don't poke meeee just leave me to sit here in peaceee\w2e\w2e\w2e\w2~"
 }
 
 //Because there is an all modifier here, you don't need to write -- between menu options
@@ -14,9 +16,11 @@ OnSakuraMenu : all
 	
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
-	"\n\n"
+	"\n"
+	"\![*]\q[Ask about something,OnMenuTopics]\n\n"
 	
-	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+	"\![*]\q[Change talk rate,OnTalkRateMenu]\n"
+	"\![*]\q[Change hour notifications,OnHourTalkChange]\n\n"
 	
 	"\![*]\q[Nevermind,blank]"	
 }
@@ -34,7 +38,7 @@ OnTalkRateMenu : all
 	elseif aitalkinterval == 60; _talkrate = "1 minute"
 	elseif aitalkinterval == 180; _talkrate = "3 minutes"
 	elseif aitalkinterval == 300; _talkrate = "5 minutes"
-	elseif aitalkinterval == 600; _talkrate = "10 minutes"
+	elseif aitalkinterval == 900; _talkrate = "15 minutes"
 	
 	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
 	"Current interval: %(_talkrate)\n\n"
@@ -44,7 +48,7 @@ OnTalkRateMenu : all
 	"\![*]\q[1 minute,OnTalkRateChange,60]\n"
 	"\![*]\q[3 minutes,OnTalkRateChange,180]\n"
 	"\![*]\q[5 minutes,OnTalkRateChange,300]\n"
-	"\![*]\q[10 minutes,OnTalkRateChange,600]\n"
+	"\![*]\q[15 minutes,OnTalkRateChange,900]\n"
 	"\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
 }
@@ -52,4 +56,44 @@ OnTalkRateMenu : all
 OnTalkRateChange
 {
 	aitalkinterval = TOINT(reference0)
+	
+	case aitalkinterval {
+		when 0; "%(pudcri)Okay,\w4 I get it\w2.\w2.\w2.\w8 We'll be quieter\w2.\w2.\w2.\e"
+		when 30; "%(pudhapi)Yap lots?\w8 You got it~\w4\w8%(craesmirk)%(smalltxt)oh boy...\e"
+		when 60; "%(pudhapi)Ooh,\w4 let's talk lots~\w8 Puft,\w4 puft,\w4 what should we talk about?%(craehapi)Umm,\w4 what do \w3you\w3 wanna talk about?\e"
+		when 180, 300; "%(pudblep)Blah,\w4 blah,\w4 yap yap yap\w2.\w2.\w2.\w8 Got it,\w4 boss.\e"
+		when 900; "%(pudhapi)C'mon,\w4 that's barely any talking.\w8 I loooove talking to my Craeons here,\w4 let us yap more~\e"
+	}
+}
+
+OnHourTalkChange : all {
+	"%(pud)\b2"
+	if (hourlytalking ==  true) {
+		"Right now, we'll say something on the change of every hour."
+	}
+	else {
+		"We won't remind you when the hour changes, so let us know if you want that~"
+	}
+	"\n\n"
+	"\![*]\q[Tell me when the hour changes,HourChangeYes]\n"
+	"\![*]\q[No hourly reminders,HourChangeNo]\n\n"
+	
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+}
+
+Selection.HourChangeYes {
+	hourlytalking = true
+	--
+	"%(pudsmile)Sure, We'll keep an eye on the hour for you~\w8%(craeangy)\w4%(smalltxt)We?\w8 I didn't agree to anything\w2.\w2.\w2.\e"
+}
+Selection.HourChangeNo {
+	hourlytalking = false
+	--
+	"%(pudsmirk)Alrighty,\w4 I guess I won't need this pocketwatch then.\w4\w8%(crae)Can I have it?\w8 It's pretty\w2.\w2.\w2.\e"
+}
+
+OnMenuTopics : all {
+	"%(crae)hey devcrae speaking here. gonna put the lore questions and stuff in tihs menu in a sec ok.%(pudthink)What?"
+	
+	"\n\n[*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
 }

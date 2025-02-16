@@ -25,6 +25,7 @@ OnKeyPress
 	if reference0 == "f1"; "\![open,readme]"
 	elseif reference0 == "t"; OnAiTalk
 	elseif reference0 == "r"; OnLastTalk
+	elseif reference0 == "h"; OnTalkTest //comment this out when releasing pls
 }
 
 //Happens about 30 seconds after a script ends, by default, to bring them back to normal poses
@@ -107,7 +108,7 @@ recommendsites_kero : array
 // SCRIPT TEST
 OnTalkTest {
 	//raise me with \![raise,OnTalkTest,test]
-	"%(pud)So,\w4 what's your body count?\w4\w8%(craethink)Hmm,\w4 I dunno\w2.\w2.\w2.\w8 I stopped counting after,\w4 like,\w4 30?\w8 But there was also\w2.\w2.\w2.\w8\n\f[height,-5]and I guess that counts too\w2.\w2.\w2.\w8 (mumbling some more)\w8\n\f[height,default]Maybe something like,\w4 %(pudhuh)\1over 110 or so\w2.\w2.\w2.%(pudsmirk)\n\nDamn bitch,\w4 you're such a hoe.\w4\w8%(craehuh)Eh?\w8 Oh-\w4%(crae) Ooooh,\w4 you mean people I slept with!\w8%(craesmile) Heehee.\w8 Well,\w4 don't worry,\w4 that list only has a certain person on it.\w8\w4%(pudhuh)Huh?\w8%(pudthink) Wait,\w4 what were you counting,\w4 then???\w4\w8%(craesmirk)Don't worry bout it.\e"
+	"%(pudsnooze)%(craesnooze)\e"
 }
 
 //CHANGE STATUS
@@ -119,10 +120,11 @@ OnCurrentStateChange {
 OnPronounsTeach {
 	// reference0 = pronoun
 	// reference1 = whether this is from first install or not
+	_temp = reference0
 	case reference0 {
-		when "he"; pronouns = "he"
-		when "she"; pronouns = "she"
-		when "it"; pronouns = "it"
+		when "he", "male"; pronouns = "male"
+		when "she", "female"; pronouns = "female"
+		when "it", "object"; pronouns = "it"
 		others; pronouns = "they"
 	}
 	
@@ -139,7 +141,7 @@ OnNameTeach {
 	
 	case frenuser {
 		when "craeons" {
-			"%(pudhapi)Look,\w4 Crae,\w4 look!\w8 It's the big you!\w8 Did they come here to pick us\w2.\w2.\w2.%(pudthink)\w8 Wait,\w4 they don't quite look like you.\w8 Maybe a bit sexier,\w4 even.\w4%(craeangy)\w4\f[height,-5](Don't flirt with my sexy alternate self while I'm right here\w2.\w2.\w2.)\w4%(pudhapi)\w8\n\nShould I flirt with you in front of them instead,\w4 then?\e"
+			"%(pudhapi)Look,\w4 Crae,\w4 look!\w8 It's the big you!\w8 Did they come here to pick us\w2.\w2.\w2.%(pudthink)\w8 Wait,\w4 they don't quite look like you.\w8 Maybe a bit sexier,\w4 even.\w4%(craeangy)\w4%(smalltxt)Don't flirt with my sexy alternate self while I'm right here\w2.\w2.\w2.\w4%(pudhapi)\w8\n\nShould I flirt with you in front of them instead,\w4 then?\e"
 		}
 		when "puddle" {
 			"%(pudhapi)Oh hey,\w4 it's the big me!\w8 Or\w2.\w2.\w2.\w2%(pudhuh)\w8 Someone who looks very like me.\w8 %(pudthink)Or\w2.\w2.\w2.\w2 Not really.\w8 Hmm\w2.\w2.\w2.\w2\n\w8%(pudsmile)Let's rummage through their files to know for sure~\w4%(craesmirk)\w8Is everyone going by %(username) so attractive,\w4 or is it just you guys?\w8 Heehee.\w4\w8%(pud)\n\nNah,\w4 sorry,\w4 it's just the one and only us~\e"
@@ -151,7 +153,7 @@ OnNameTeach {
 			"%(crae)Hey there,\w4 Ketchup Twink.\w8%(craesmirk) Yeah,\w4 that's right.\w8 I know what you are.\w4\w8%(pudhapi)Hiiiii\w2iii\w2i\w2i\w2i Mr. Charmer~\e"
 		}
 		when "harune" {
-			"%(crae)OMG,\w4 it's harune!\w8%(craehapi) Hiiiii harune,\w4 hope your day was good~\w4\w8%(pudhapi)Hey hey hey hello haruney want me\w2 %(pudsmirk)to google some wolfguys for you\w2.\w2.\w2.\w8%(pudhapi) (giggling)\e"
+			"%(crae)OMG,\w4 it's harune!\w8%(craehapi) Hiiiii harune,\w4 hope your day was good~\w4\w8%(pudhapi)Hey hey hey hello haruney want me\w2 %(pudsmirk)to google some wolfguys for you\w2.\w2.\w2.\w8%(pudhapi) %(nartxt)(giggling)\e"
 		}
 		when "pixel" {
 			"%(pudhapi)Heya there puppyboy,\w4 looking handsome today~\w8 Mwa~"
@@ -160,7 +162,7 @@ OnNameTeach {
 			"%(craeblep)Get a room\w2.\w2.\w2.\w8 %(craesmirk)Oh,\w4 wait,\w4 I guess this kinda is one.\e"
 		}
 		when "cel" {
-			"%(pud)No way,\w4 it's our smartguy cel!\w8 Hello,\w4 cel,\w4 look,\w4 I'm da code now!\w8 %(pudhapi)Are you proud of me?\w8%(craeangy)\w4\f[height,-5](I'm the one who did the code,\w4 be prouder of me instead\w2.\w2.\w2.\w2)\w4\w8%(pudhapi)\n\n\f[height,-5](Don't worry,\w4 I'm soooo proud of you too~)\e"
+			"%(pud)No way,\w4 it's our smartguy cel!\w8 Hello,\w4 cel,\w4 look,\w4 I'm da code now!\w8 %(pudhapi)Are you proud of me?\w8%(craeangy)\w4%(smalltxt)(I'm the one who did the code,\w4 be prouder of me instead\w2.\w2.\w2.\w2)\w4\w8%(pudhapi)\n\n%(smalltxt)(Don't worry,\w4 I'm soooo proud of you too~)\e"
 		}
 		others {
 			"%(pudhapi)Neat!\w8 Okay,\w4 we'll be calling you %(username) from now on.\w8\w4%(crae)Nice to meetcha,\w4 %(username)~\e"

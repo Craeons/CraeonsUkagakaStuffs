@@ -174,3 +174,8 @@ OnHeadlinesenseFailure
 
 	"\0\s[0]Could not get RSS: %(_reason)."
 }
+
+OnChoiceSelect
+{
+    EVAL("Selection.%(reference0)")
+}

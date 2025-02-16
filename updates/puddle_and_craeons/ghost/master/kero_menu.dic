@@ -24,6 +24,7 @@ OnNameChange : all {
 }
 
 OnPronounsChange : all {
+	"\1"
 	"\n\n\_q\![*]\q[he/him,OnPronounsTeach,he,0]"
 	"\n\![*]\q[she/her,OnPronounsTeach,she,0]"
 	"\n\![*]\q[it/its,OnPronounsTeach,it,0]"
