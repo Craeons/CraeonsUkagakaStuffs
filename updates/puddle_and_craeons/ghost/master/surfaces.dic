@@ -19,6 +19,13 @@ bigtxt {
 	"\f[height,+6]"
 }
 
+italitxt {
+	"\f[italic,1]"
+}
+xitalitxt {
+	"\f[italic,default]"
+}
+
 // Puddle's expressions
 pud {
 	"\0\s[0]"

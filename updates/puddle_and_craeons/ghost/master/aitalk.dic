@@ -56,6 +56,7 @@ RandomTalk : nonoverlap_pool
 		"%(craeshy)"
 		"Huh,\w4 interesting..."
 		--
+		bigyousmentioned += 1
 		"\w4\w8%(pudhuh)\n\nWhat? What is it?\w4\w8%(crae)\n\nNah,\w4 I'll tell you later.\w8 Not in front of %(username).\e"
 	}
 	{

@@ -9,7 +9,11 @@ OnFirstBoot : all
 	username = "ANONYMOUS"
 	pronouns = "neutral"
 	currentstate = "default"
-	hourlytalking = false
+	hourlytalking = 0
+	librarymentioned = 0
+	craeatebooksmentioned = 0
+	bigyousmentioned = 0
+	pudwritingmentioned = 0
 	
 	"%(pudhuh)Huh-\w4 wha-\w4 how did we end up here?\w4%(craeblep)\w8Dunno,\w4 you tell me\w2.\w2.\w2.\w8%(puduhh)\w4\n\nI just\w2 followed you around?\w8%(craeuhh)\w4\n\nI thought it was \w2me\w2 following \w2you\w2 around?\w8%(pudthink)\w4\n\nIf we both followed each other,\w4 how did we-\w2%(crae)\n\nHey,\w3 hey,\w3 look,\w3 there's someone watching over there.\w4%(pudhuh)\w8\n\nOh?\w8 %(pud)Ooooh,\w4 really.\w8\w4 %(pudhapi)\nHi there!\w8 %(pud)Don't mind us,\w4 we just got a bit lost here\w2.\w2.\w2. \x%(pudthink)\w8\w4Who are you,\w4 actually?"
 	
@@ -28,7 +32,11 @@ OnInitialize
 	//If you add new variables in updates, I recommend initializing them like so:
 	//if !ISVAR("NewVariable"); NewVariable = 0
 	//This means that it will only set the new variable if the user doesn't already have it, so that their variables don't get overwritten
-	if !ISVAR("hourlytalking"); hourlytalking = false
+	if !ISVAR("hourlytalking"); hourlytalking = 0
+	if !ISVAR("librarymentioned"); librarymentioned = 0
+	if !ISVAR("craeatebooksmentioned"); craeatebooksmentioned = 0
+	if !ISVAR("bigyousmentioned"); bigyousmentioned = 0
+	if !ISVAR("pudwritingmentioned"); pudwritingmentioned = 0
 	
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{

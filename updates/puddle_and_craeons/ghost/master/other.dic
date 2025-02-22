@@ -108,6 +108,11 @@ recommendsites_kero : array
 // SCRIPT TEST
 OnTalkTest {
 	//raise me with \![raise,OnTalkTest,test]
+	hourlytalking = 0
+	librarymentioned = 0
+	craeatebooksmentioned = 0
+	bigyousmentioned = 0
+	pudwritingmentioned = 0
 	"%(pudsnooze)%(craesnooze)\e"
 }
 
