@@ -8,7 +8,7 @@ name,Early Birb and Starry Night Cat
 
 craftman,Craeons
 craftmanurl,https://craeons.tumblr.com/
-homeurl,
+homeurl,https://raw.githubusercontent.com/Craeons/CraeonsUkagakaStuffs/refs/heads/main/balloonupdates/earlybirb_starrynightcat/
 
 origin.x,67
 origin.y,67
@@ -31,11 +31,11 @@ font.shadowcolour.g,100
 font.shadowcolour.b,100
 font.shadowstyle,outline
 
-onlinemarker.x,8
-onlinemarker.y,-22
+onlinemarker.x,0
+onlinemarker.y,-298
 
-sstpmarker.x,8
-sstpmarker.y,-18
+sstpmarker.x,316
+sstpmarker.y,56
 
 sstpmessage.x,20
 sstpmessage.y,-20
