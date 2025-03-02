@@ -17,7 +17,7 @@ OnSakuraMenu : all
 	"\![*]\q[Talk to me,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[Say that again,OnLastTalk]"
 	"\n"
-	"\![*]\q[Ask about something,OnMenuTopics]\n\n"
+	"\![*]\q[Ask about something,OnMenuTopicsPuddle]\n\n"
 	
 	"\![*]\q[Change talk rate,OnTalkRateMenu]\n"
 	"\![*]\q[Change hour notifications,OnHourTalkChange]\n\n"
@@ -92,7 +92,8 @@ Selection.HourChangeNo {
 	"%(pudsmirk)Alrighty,\w4 I guess I won't need this pocketwatch then.\w4\w8%(crae)Can I have it?\w8 It's pretty\w2.\w2.\w2.\e"
 }
 
-OnMenuTopics : all {
+OnMenuTopicsPuddle : all {
+	"\0\b2"
 	"\![*]\q[So who are you guys?,explainwhoareyou_pud]\n"
 	"\![*]\q[What are you exactly?,explainwhatareyou_pud]\n"
 	if (bigyousmentioned > 0); "\![*]\q[Your originals?,explainpieces_pud]\n"
@@ -111,37 +112,37 @@ Selection.explainwhoareyou_pud {
 	pudwritingmentioned += 1
 	librarymentioned += 1
 	craeatebooksmentioned += 1
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainwhatareyou_pud {
 	"%(pudhapi)We're both shapeshifters!\w8%(pud) Just different kinds.\w8 My species are known as inklers in your human language,\w4 although we're not made of ink actually.\w8 More like some space dust and matter,\w4 I think.\w8 %(pudhapi)We can change shape to almost anything!\w8 %(pudthink)Well,\w4 not all of us can,\w4 but I can do this for sure.\w8 I can also eat almost anything!\w8 Aaaaaand,\w4 I'm also like,\w4 very cute."
 	--
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainpieces_pud {
 	"%(pud)Well, these things you see here aren't our real forms,\w4 you know.\w8%(pudthink) Or more like,\w4 they are,\w4 but not really?\w8 %(pud)Our real selves are still in The Library,\w4 and we are just the lil parts of them that got separated and lost.\w8 Over there,\w4 %(pudsmirk)I'm the main assistant librarian,\w4 you know!\w8 A big shot!\w8 %(pudsmile)They call me a Storyteller~%(craesmirk)%(nartxt)Not very %(italitxt)big%(xitalitxt) for a big shot,\w4 though\w2.\w2.\w2."
 	--
 	librarymentioned += 1
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainlibrary_pud {
 	"%(pudblep)THE\w3 Library,\w4 duh~\w8 %(pudsmirk)And that's The Great Library of Eternity for you,\w4 peasant.\w8\w4%(pudhapi) Ehehe\w2.\w2.\w2.\w8%(pud) It's a pocket dimension where me and Crae work.\w8 It's placed in the middle of nowhere,\w4 but at the same time,\w4 anywhere in %(craesnooze)\0space.\w8 It basically keeps information about everything\w2.\w2.\w2.\w8%(pudsmirk) And also just normal books and comics.\w8%(pudhapi) \nDo you wanna visit us sometime?\w8 Maybe I can even ask The Librarian to let you onto the second floor~"
 	--
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainhowarrive_pud {
 	"%(pudthink)If only we knew,\w4 huh.\w8 We don't even know how we've got separated from our big selves,\w4 and then we just wandered around til we got here.\w4\w8%(craeblep)I was just following Puddle\w2.\w2.\w2.\w4\w8%(pudblep)\n\nAnd I was following you, dummy."
 	--
 	bigyousmentioned += 1
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainwherefrom_pud {
 	"%(pudthink)Uhhh,\w4 idk,\w4%(pudblep) space?\w8%(pud) If you're asking where I was born then I simply don't remember.\w8%(pudthink) But considering,\w4 y'know,\w4 my species and stuff,\w4%(pud) maybe I was unironically just born from Space somewhere."
 	--
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }
 Selection.explainwritingjob_pud {
 	"%(pudhapi)Ohhhh,\w4 it's my main job!\w8%(pud) Well,\w4 big me's main job,\w4 since all %(italitxt)\w3I\w3%(xitalitxt) do is sit here and slack off.\w8 %(pudhapi)But,\w2 but,\w2 but!\w8 I looooove stories!\w8 %(pud)And I love writing them and telling them!\w8\w4\n%(pudthink)So,\w4 back in The Library,\w4 my job was to wander around different worlds and collect stories for me to write down.\w8%(pud) Stories about anything!\w8%(pudthink) Like,\w4 interesting people.\w8%(pud) Or events.\w8%(pudhapi) Or information about relics!\w8 Or the world ending!\w8 Anything!!!\w4\w8\n%(pud)And then when I do this,\w4 they turn into books.\w8%(pudhapi) I'm not sure exactly how it works,\w4 but,\w4 well,\w4 it works!"
 	--
-	"\0\n\n\![*]\q[Back,OnMenuTopics]  \![*]\q[Nevermind,blank]"
+	"\0\n\n\![*]\q[Back,OnMenuTopicsPuddle]  \![*]\q[Nevermind,blank]"
 }

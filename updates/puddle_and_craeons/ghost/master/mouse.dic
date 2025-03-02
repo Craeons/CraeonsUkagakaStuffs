@@ -24,6 +24,16 @@ OnMouseDoubleClick
 						"%(pud)\i[7]Nya?\e"
 					}
 				}
+				when "nose" {
+					"\0%(nartxt)Boop!%(xnartxt)\n\n"
+					--
+					"%(pudangy)Nya?"
+					"%(pud)Nya?"
+					"%(pud)Nyaw?"
+					"%(pud)?"
+					--
+					"\e"
+				}
 				others; OnSakuraMenu
 			}
 		}
@@ -36,6 +46,19 @@ OnMouseDoubleClick
 						"%(crae)\i[6]Mm?\e"
 						"%(crae)\i[6]Piou?\e"
 					}
+				}
+				when "nose" {
+					"\1%(nartxt)Boop!%(xnartxt)\n\n"
+					--
+					"%(craeangy)Piou?"
+					"%(craeangy)Nyeh."
+					"%(craeangy)Hhrm."
+					"%(craeangy).\w2.\w2."
+					if (frenuser == "puddle"); "%(craeangy)You!!!\w8 I know you just like my reaction!\w8%(craeshy)\nHmph\w2.\w2.\w2."
+					if (frenuser == "sebi"); "%(craeangy)Nyeh\w2.\w2.\w2.\w8 I'm gonna pour all your ketchup down the drain."
+					--
+					if (RAND(10) < 2); "\w4\w8%(pudhapi)Heh,\w4 cute reaction.\e"
+					"\e"
 				}
 				others; OnKeroMenu
 			}

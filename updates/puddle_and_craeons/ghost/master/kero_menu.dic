@@ -1,6 +1,9 @@
 KeroMenuGreetings : nonoverlap
 {
-	"%(crae)check it out i got them BAD ASS DEBUG optionss"
+	"%(craesmirk)Now,\w4 for whatever could you need this little guy's help %(craehapi)with?"
+	"%(crae)I've been pokieed\w2.\w2.\w2.\w8 Heehee\w2.\w2.\w2."
+	"%(craethink)Mmmhm?"
+	"%(craethink)Something up,\w4 %(username)?"
 }
 
 //Because there is an all modifier here, you don't need to write -- between menu options
@@ -9,6 +12,8 @@ OnKeroMenu : all
 	"\1\b2\![set,autoscroll,disable]"
 	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; KeroMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
 	"\n\n\_q"
+	
+	"\![*]\q[Ask about something,OnMenuTopicsCraeons]\n"
 	
 	//Put anything you want here, anything at all. For example, here's how you can add your own menu... You can make as many like this as you want! Uncomment if you want to test it out, or erase if you don't want it
 	"\![*]\q[Replay Installation Dialogue,OnFirstBoot,0]\n"
@@ -32,6 +37,39 @@ OnPronounsChange : all {
 	"\n\n\![*]\q[Back,OnKeroMenu]\e"
 }
 
+OnMenuTopicsCraeons : all {
+	"\1\b2"
+	"\![*]\q[So who are you guys?,explainwhoareyou_crae]\n"
+	"\![*]\q[What are you exactly?,explainwhatareyou_crae]\n"
+	// if (bigyousmentioned > 0); "\![*]\q[Your originals?,explainpieces_pud]\n"
+	// if (librarymentioned > 0); "\![*]\q[What's up with this library?,explainlibrary_pud]\n"
+	// "\![*]\q[How did you end up here?,explainhowarrive_pud]\n"
+	// "\![*]\q[Where are you from originally?,explainwherefrom_pud]\n"
+	if (craeatebooksmentioned > 0); "\![*]\q[Eating books?,explaineatingbooks_crae]\n"
+	if (craeshapeshiftmentioned > 0); "\![*]\q[You are what you eat?,explainshapeshifting_crae]\n"
+}
+
+Selection.explainwhoareyou_crae {
+	"%(craeblep)Oh,\w4 we're just some silly little guys.\w8 Teeny pieces of a greater whole,\w4 really,\w4 but when you think about it,\w4%(crae) isn't everyone really just a lil piece of the universe?\w8 You should let us out of your pc and into your house we're normal and can be trusted on the same plane of reality as your personage\w4%(pudsmirk)%(smalltxt)(honey,\w4 you're being dramatic again...)"
+	--
+	"\1\n\n\![*]\q[Back,OnMenuTopicsCraeons]  \![*]\q[Nevermind,blank]"
+}
+Selection.explainwhatareyou_crae {
+	"%(crae)We're shapeshifters\w2.\w2.\w2.\w8 Well,\w4%(craehapi) adorable cute Puddle here is a shapeshifter,\w4%(craesmirk) I'm an abomination of nature that happens to be able to shift shape.\w8%(crae) Totally different.\w4\w8%(pudsmirk)%(smalltxt)(a shapeshifter,\w4 but edgy...)"
+	--
+	"\1\n\n\![*]\q[Back,OnMenuTopicsCraeons]  \![*]\q[Nevermind,blank]"
+}
+Selection.explaineatingbooks_crae {
+	"%(craeblep)Why do you eat anything,\w4 huh?\w8 Ever thought about that?\w4\w8%(pudsmirk)Usually people don't turn into what they eat.\w4\w8%(crae)\n\nSpilling my secrets to %(username),\w4 are you?"
+	--
+	craeshapeshiftmentioned += 1
+	"\1\n\n\![*]\q[Back,OnMenuTopicsCraeons]  \![*]\q[Nevermind,blank]"
+}
+Selection.explainshapeshifting_crae {
+	"%(craesmirk)Well.\w8%(crae) Yeah,\w4 that's the short of it.\w8 I eat a goat,\w4 I can grow goat hooves if I want.\w8 I eat some fish,\w4 I can grow gills.\w8%(craeblep) It's no stardust spacestuff shapeshifting,\w4 but I got a lot in my repertoire.\n\w4\w8%(smalltxt)(from eating people heehee)%(pudcri)%(smalltxt)(please stop eating random stuff,\w4%(pudhapi) you can just take a bite of me~)"
+	--
+	"\1\n\n\![*]\q[Back,OnMenuTopicsCraeons]  \![*]\q[Nevermind,blank]"
+}
 /*
 OnSomeMenu : all
 {

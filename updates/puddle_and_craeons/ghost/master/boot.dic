@@ -37,6 +37,7 @@ OnInitialize
 	if !ISVAR("craeatebooksmentioned"); craeatebooksmentioned = 0
 	if !ISVAR("bigyousmentioned"); bigyousmentioned = 0
 	if !ISVAR("pudwritingmentioned"); pudwritingmentioned = 0
+	if !ISVAR("craeshapeshiftmentioned"); craeshapeshiftmentioned = 0
 	
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
@@ -68,26 +69,158 @@ OnBoot
 		"\0\s[0]Hello %(username).\w8 Good to see you."
 		"\0\s[0]Hello.\w8 Ready to make something cool?"
 	} */
+	
+	// Puddle n Crae's sprites
+	"\0\s[0]\1\s[10]"
+	--
 	case hour {
-		when 0-5 {
-			"%(pudsnooze)%(craesnooze)Hmmmghh\w2,\w2,\w2,\w8 it's too early for this\w2.\w2.\w2.\w8 Can't you put us back for right now?\0%(nartxt)(Yawns)\e"
+		when 0-2 {
+			"%(craesnooze)Pudli\w2.\w2.\w2.\w8 It's time for bed soon\w2.\w2.\w2.\w8 \n%(nartxt)zzzzz%(xnartxt)\w4\w8%(pudcri)Umm,\w4 don't you want to talk to me and %(username) more?\w4\w8%(crae)\n\nHhrm\w2.\w2.\w2.\w8\n\n%(craehapi)Yeah,\w4 I do~\w4\w8%(pudhapi)Yay~!\e"
+		}
+		when 3-5 {
+			"%(pudsnooze)%(craesnooze)Hmmmghh\w2,\w2,\w2,\w8 it's too early for this\w2.\w2.\w2.\w8 Can't you put us back for right now?\0%(nartxt)It's yawning.\e"
 		}
 		when 6-11 {
-			"%(pudhapi)Good morny,\w4 %(username)~\w4\w8%(crae)Had a nice brekky?\e"
+			case frenuser {
+				when "puddle" {
+					"%(craehapi)Hey there,\w4 %(username)~\w8%(crae) Good morny!\w8 I hope you had a nice rest today.\w8\n%(craehapi)Love you lots~\e"
+				}
+				when "sebi" {
+					"%(pudhuh)%(craehuh)%(they)'s awake before noon?\w4\w8\0A miracle\w2.\w2.\w2.\w8 %(pudhapi)Next,\w4 it'll start snowing in Spain,\w4 lol.\e"
+					"%(craehapi)%(pudhapi)Hello,\w4 Mr. Charmer~\w8 Good job being awake sooooo early~\e"
+				}
+				when "rain" {
+					"%(craehapi)%(pudhapi)Hiiiii Rainy,\w4 gooooood morning~!\w4\w8\1Hiiii,\w4 fren~\e"
+				}
+				when "harune" {
+					"%(pudhapi)Helloooo,\w4 Haruney~%(craehapi)No obligations today,\w4 Harune?\w8 We're happy to keep you some company,\w4 heehee.\e"
+					"%(pudhapi)Hiiii,\w4 %(username)~\w8 %(pudsmirk)Having a Beebtiful day today?\e"
+				}
+				when "pixel" {
+					"%(pudhapi)Hey puppyboy~\w8 Did you just come back home today?\w8 Heh,\w4%(pudsmirk) did you miss me this much?\e"
+				}
+				when "cel" {
+					"%(craesmirk)Let me guess,\w4 you opened us up so you can ignore us and play some ROTND?%(pudhuh)Puft,\w4 be nice\w2.\w2.\w2.\w8 %(pudhapi)Good morning,\w4 %(username)~\e"
+				}
+				others {
+					"%(pudhapi)Good morny,\w4 %(username)~\w4\w8%(crae)Had a nice brekky?\e"
+				}
+			}
 		}
 		when 12-15 {
-			"%(pudcri)Lunch time\w2.\w2.\w2.\w8 I want lunch\w2.\w2.\w2.\e"
+			case frenuser {
+				when "puddle" {
+					"%(pudcri)%(craecri)Pudli\w2.\w2.\w2.\w8 When you eat lunch,\w4 can you give us some too\w2.\w2.\w2.\w8 We're soo\w2o\w2o\w2o hungry\w2.\w2.\w2.\w4\w8\0Yeah,\w4 share a bit with the other you here as well\w2.\w2.\w2.\e"
+					"%(craehapi)Hey there,\w4 beloved~ \w8%(crae)Had lunch yet?\w8 %(craehapi)Hope it's tasty~\e"
+				}
+				when "sebi" {
+					"%(craehapi)%(pudhapi)Rise and shine,\w4 beeper~\w4\w8%(craesmirk)About time we saw your handsome face around here~\e"
+					"%(craehapi)G'morning,\w4 %(username)~\w8 %(craesmirk)Or,\w4 I guess I should say afternoon\w2.\w2.\w2.\e"
+				}
+				others {
+					"%(pudcri)Lunch time\w2.\w2.\w2.\w8 I want lunch\w2.\w2.\w2.\e"
+					"%(craethink)What's the last thing I ate\w2.\w2.\w2?\w4\w8%(pudhuh)Did you not get lunch before we left?\w4\w8%(crae)\n\nNah,\w4 %(craeblep)but I've got the closest thing to a snack here~\e"
+				}
+			}
 		}
 		when 16-18 {
-			"%(craethink)Wonder what we're gonna do with our afternoon?\w4\w8%(pudsmirk)I have a few ideas\w2.\w2.\w2.\e"
+			case frenuser {
+				when "pixel" {
+					"%(pudhapi)Good mooooorning, my puppyguy~%(craehuh)It's\w2.\w2.\w2.\w8 Afternoon\w2.\w2.\w2.\e"
+				}
+				when "puddle" {
+					"%(craehapi)Opening us at the tender hour of %(hour):%(minute)?\w8 Heehee,\w4 it's alright,\w4 I know you miss me~\e"
+					"%(craehapi)Hey,\w4 %(username)~\w8 %(crae)Hey,\w4 %(username),\w4 hey,\w4 %(username),\w4 %(craehapi)hey,\w4 %(username),\w4 hey,\w4%(pudhapi)Yeah,\w4 you're happy to see your Puddle,\w4 we get it\w2.\w2.\w2.\e"
+				}
+				others {
+					"%(craethink)Wonder what we're gonna do with our afternoon?\w4\w8%(pudsmirk)I have a few ideas\w2.\w2.\w2.\e"
+					"\1\s[-1]%(pudhuh)Huh?\w8 Crae?\w8 Crae,\w4 %(pudcri)where are you\w2.\w2.\w2?\w8\w8\w8%(pudhuh)%(craeblep)Boo!\w8%(craehapi) Hee%(pudangy)\1hee.\w4\w8\1\n\nYou scared me!\w8 %(pudcri)I thought you were missing\w2.\w2.\w2.\w4\w8%(crae)Aww\w2.\w2.\w2.\w8%(craehapi) Look,\w4 I'm right here~\w8 No worries~\e"
+				}
+			}
 		}
 		when 19-22 {
-			"%(pudcri)Dinner\w2.\w2.\w2.\w8 I want dinner\w2.\w2.\w2.\w4\w8%(crae)%(smalltxt)Puddle's looking tasty today\w2.\w2.\w2.\e"
+			case frenuser {
+				when "pixel" {
+					"%(craesmirk)Hey there,\w4 boytoy%(pudhuh)\1,\w4 not gonna head out today?\w4\w8%(pudthink)Boytoy\w2.\w2.\w2?\w4\w8%(craeblep)\n\nYeah,\w4 yours.\w4\w8%(pudthink)\n\nWell,\w4 he's more of a\w2.\w2.\w2%(pudsmirk).\w8 Toy poodle.\e"
+				}
+				when "harune" {
+					"%(craehapi)Hiiii,\w4 %(username)~\w8%(crae) Didja take the bus out today?\w8 %(craethink)Or never left?\w4\w8%(pudhapi)Hey,\w4 we're keeping you company either way!\e"
+				}
+				others {
+					"%(pudcri)Dinner\w2.\w2.\w2.\w8 I want dinner\w2.\w2.\w2.\w4\w8%(crae)%(smalltxt)Puddle's looking tasty today\w2.\w2.\w2.\e"
+				}
+			}
+		}
+		when 23 {
+			case frenuser {
+				when "sebi" {
+					"%(pudblep)Opening us so close to midnight?\w4\w8%(craeblep)You'd better not be opening any dusty ol shooter games so close to midnight,\w4 too~!\e"
+				}
+				when "pixel" {
+					"%(pudhapi)Hiiii dear,\w4 happy to see you~\w8 Gonna spend the night with uuuuus,\w4 riiiiight?\w4\w8%(craeblep)He can spend the night with %(italitxt)you%(xitalitxt),\w4 maybe.\e"
+				}
+				when "cel" {
+					"%(craesmirk)Shouldn't you be sleeping instead of summoning us here?\w4\w8%(pudhapi)Hiiiii %(username),\w4 hiiiiii~\e"
+				}
+				others {
+					"%(craethink)Hmm,\w4 %(hour):%(minute)\w2.\w2.\w2.\w8 Soon enough,\w4 it'll be midnight."
+					--
+					if (minute > 45) {
+						"\n\w8%(craehapi)Y'know what they say,\w4 almost midnight means it isn't yet midnight!%(pudhuh)\w4\w8Uhh\w2.\w2.\w2.\w8 people say that?\w8 Like,\w4 at all?\w8%(pudthink) Anywhere?\e"
+					} else {
+						"\w4\w8%(pudblep)Soon enough?\w8 Uh huh,\w4 it's still a while away\w2.\w2.\w2.\e"
+					}
+				}
+			}
 		}
 		others {
 			"%(pudsnooze)%(craesnooze)\_s\w3z\w3z\w3z\w3z\w3z\w3z\w3z\e"
 		}
 	}
+}
+
+OnGhostChanged
+{
+	"\0\s[0]\1\s[10]"
+	--
+	case hour {
+		when 0-1 {
+			"%(craesnooze)%(pudsmirk)Was it bedtime for %(reference0), already?\w8\1sssnzzzzz...\e"
+		}
+		when 2-5 {
+			"%(craesnooze)%(pudsnooze)\_s\w3z\w3z\w3z\w3z\w3z\w3z\w3z\e"
+		}
+		when 6 {
+			"%(craesnooze)%(pudsnooze)Hrm\w2.\w2.\w2.\w8 Bye,\w4 %(reference0).\w8\n%(nartxt)Yawn\w2.\w2.\w2.\e"
+		}
+		when 7-8 {
+			"%(craesnooze)%(pudhapi)Bye-bye,\w4 %(reference0)~!\w8%(pud) And hello,\w4 %(username).\w4\w8\1zzzzzzzz\w2.\w2.\w2.\w4\w8%(pudthink)\n\nYou're still sleepy?\e"
+		}
+		others {
+			"%(craesmirk)Of course you'd prefer us instead of %(reference2)~ ♥\w8\nTeehee.\e"
+			"%(pudhapi)Hi\w2i\w2i\w2i\w2i\w2~\w8 Missed us that much?\e"
+			"%(crae)Say bye-bye to losers\w2.\w2.\w2.\w4\w8%(pudhapi)And hi to coolers!\w4\w8%(craesmirk)\n\n%(smalltxt)That barely made sense,\w4 but I'll give it a pass.\e"
+			"%(pudsmirk)I swear it wasn't me all along,\w4 and I didn't just shapeshift back from being %(reference0)~\w4\w8%(crae)Can confirm,\w4 it was \w3Very \w3Definitely and most \w3Specifically not\w3 him\w3 right there just now~\e"
+		}
+	}
+}
+
+OnGhostChanging
+{
+	"%(pudcri)%(craeangy)Hmph,\w4 you'd rather spend time with %(reference2)\w2.\w2.\w2.\w8 I see how it is.\w8%(craesmirk) Fine~"
+	--
+	"\w8\w8\e"
+}
+
+OnGhostCalled
+{
+	"\0\s[0]\1\s[10]"
+	--
+	"%(craesmirk)Hello,\w4 %(reference2),\w4 were you getting bored with %(username) for company~?\w4\w8%(pudsmirk)Or maybe %(username) was lonely with just %(reference2)?\n\n\1\n\n\_s%(nartxt)They're giggling together.\e"
+	"%(pudhuh)Huh?\w8 Wha?\w8 Who are you?\w8%(pudcri) And why'd you call us he\w2e\w2e\w2e\w2re?\e"
+	"%(craesmirk)Heyyyy there,\w4 %(reference0)~\w8 Wanna%(pudhuh)\1 chat~?\e"
+	"%(crae)Hey Puddle,\w4 look,\w4 %(reference0) over there called us in~\w4\w8%(pud)Hiya,\w4 cutie~\w4\w8%(craesmirk)Wanna do fun stuff together,\w4 %(reference0)?\w4\w8%(pudhapi)Yeah,\w4 wanna join us while we make out?\w4\w8\n\n%(craehapi)\n\n\_s%(nartxt)They're giggling.\e"
+	"%(pudcri)I don't wanna talk to strangers,\w4 leave me al\w2oo\w2oo\w2oo\w2ne\w2.\w2.\w2.\w4\w8%(crae)There,\w4 there\w2.\w2.\w2.\w8%(craehapi) You should just talk to me instead~\e"
 }
 
 OnClose
